@@ -11,7 +11,7 @@
 run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	double a,b,c;  //DOUBLE - ЧИСЛО С ПЛАВАЮЩЕЙ ТОЧКОЙ
+	double a,b,c;                    //DOUBLE - ЧИСЛО С ПЛАВАЮЩЕЙ ТОЧКОЙ
 	double x1,x2,d;
 	
 	a=1.2;
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 	c=3.3;
 
 	printf("vvedite a: \n");
-	scanf("%lf", &a);
+	scanf("%lf", &a);             //%lf — это вещественный формат двойной точности / числа с плавающей точкой типа double
 	printf("vvedite b: \n");
 	scanf("%lf", &b);
 	printf("vvedite c: \n");
