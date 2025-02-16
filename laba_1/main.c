@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 	scanf("%lf", &a);             //%lf — это вещественный формат двойной точности / числа с плавающей точкой типа double
 	printf("vvedite b: \n");      //SCANF - ВВОД ДАННЫХ
 	scanf("%lf", &b);
-	printf("vvedite c: \n");
+	printf("vvedite c: \n");     
 	scanf("%lf", &c);
 	
 	d=pow(b,2)-4*a*c;
@@ -42,8 +42,14 @@ int main(int argc, char *argv[]) {
 	if (d<0){
 	printf("net kornei n");	
 	}
+	
 		
 	
 	
 	return 0;
 }
+
+// %d — целые числа; 
+   %f — вещественное число типа float; 
+   %lf — вещественное число типа double (обозначение lf от long float); 
+   %c — символ
