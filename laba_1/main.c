@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 
 	printf("vvedite a: \n");
 	scanf("%lf", &a);             //%lf — это вещественный формат двойной точности / числа с плавающей точкой типа double
-	printf("vvedite b: \n");
+	printf("vvedite b: \n");      //SCANF - ВВОД ДАННЫХ
 	scanf("%lf", &b);
 	printf("vvedite c: \n");
 	scanf("%lf", &c);
