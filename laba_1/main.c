@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	printf("vvedite c: \n");     
 	scanf("%lf", &c);
 	
-	d=pow(b,2)-4*a*c;             //POW() - ВОЗВРАЩАЕТ СТЕПЕНЬ ЧИСЛА
+	d=pow(b,2)-4*a*c;             //POW(ОСНОВАНИЕ, СТЕПЕНЬ) - ВОЗВРАЩАЕТ СТЕПЕНЬ ЧИСЛА
 	printf("d=%lf\n",d);
 	
 	if (d>0){
