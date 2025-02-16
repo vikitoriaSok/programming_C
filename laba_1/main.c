@@ -73,4 +73,48 @@ int main(int argc, char *argv[]) {
     *   Если D = 0, вычислите один вещественный корень x = -b / (2a). В этом случае уравнение имеет два совпадающих корня.
     *   *Если D < 0, выведите сообщение "Вещественных корней нет." и завершите выполнение программы.*
 
-5.  Вывод результатов: Выведите на консоль значения коэффициентов a, b, c и вычисленные корни x1 и x2.  Используйте функцию printf для форматированного вывода.
+5.  Вывод результатов: Выведите на консоль значения коэффициентов a, b, c и вычисленные корни x1 и x2.  Используйте функцию printf для форматированного вывода. */
+
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv[]) {
+	double a,b,c;
+	double x1,x2,d;
+	
+	a=5.3;
+	b=2.6;
+	c=1.4;
+	
+	printf("vvedite a: \n");
+	scanf("%lf, &a");
+	printf("vvedite b: \n");
+	scanf("%lf, &b");
+	printf("vvedite c: \n");
+	scanf("%lf, &c");
+		
+	d=b*b-4*a*c;	
+	printf("d=%lf\n",d );
+	
+	if (d>0) {
+		x1=(-b+sqrt(d)/(2*a));
+		x2=(-b-sqrt(d)/(2*a));
+		printf("x1=%lf\n",x1);
+		printf("x2=%lf\n",x2);
+	}
+	
+	if (d==0){
+		x1=(-b)/(2*a);
+		printf("x1=%lf\n",x1);
+	}
+	
+	if (d<0){
+		printf("net korney\n");
+	}
+	
+	return 0;
+}
