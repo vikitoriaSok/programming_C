@@ -75,7 +75,6 @@ int main(int argc, char *argv[]) {
 
 5.  Вывод результатов: Выведите на консоль значения коэффициентов a, b, c и вычисленные корни x1 и x2.  Используйте функцию printf для форматированного вывода. */
 
-#include <iostream>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
