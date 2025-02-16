@@ -1,4 +1,4 @@
-/*ЗАДАЧА 1
+//ЗАДАЧА 1
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,4 +10,4 @@ int main(int argc, char *argv[])
 	printf("How old are you?\n");
 	return 0;
 }
-*/
+
