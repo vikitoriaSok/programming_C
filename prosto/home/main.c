@@ -34,3 +34,17 @@ int main(int argc, char *argv[])
 int main(int argc, char *argv[]) 
 {	printf("Wake up, Neo...\n\nThe Matrix has you...\n\nFollow the white rabbit...\n\n");
 	return 0;}
+
+
+
+//ЗАДАЧА 3
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main(int argc, char *argv[]) 
+{	printf("NICKNAME: NEO\n"
+	"city: Vladivostok\n"
+	"age: 18\n"
+	"height: 162\n"
+	"weight: 75\n");
+ 	return 0; }
