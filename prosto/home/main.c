@@ -58,3 +58,19 @@ int main(int argc, char *argv[])
 2. ВЕЩЕСТВЕННЫЕ ЧИСЛА - double
 3. СИМВОЛЫ - char
 
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main(int argc, char *argv[]) 
+{	char c = "F";
+	int n = 10;
+	float f = 3.14;
+	double d = 3.12445;
+	
+	printf("char c = %c\n", c);
+	printf("int n = %d\n", n);
+	printf("float f = %f\n", f);
+	printf("double d = %lf\n", d);
+
+	return 0; }
+
