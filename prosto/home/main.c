@@ -97,3 +97,30 @@ int main(int argc, char *argv[])
     
 	return 0;}
 
+//ЗАДАЧА 6
+#include <stdio.h>
+#include <stdlib.h>
+
+/*  Расчет площади и периметра прямоугольника
+
+1. Напишите программу на C, которая запрашивает у пользователя длину и ширину прямоугольника
+2. вычисляет его площадь 
+3. вычисляет его периметр 
+4. выводит результаты. */
+
+int main(int argc, char *argv[]) 
+{	int length, width, area, perimeter;
+	
+	printf("Enter length: ");
+	scanf("%d", &length);
+	
+	printf("Enter width: ");
+	scanf("%d", &width);
+	
+	area = length * width;
+	perimeter = 2 * ( length + width);
+	
+	printf("perimeter area: %d\n", perimeter);
+	printf("rectangle area: %d\n", area);
+    
+	return 0;}
