@@ -48,3 +48,13 @@ int main(int argc, char *argv[])
 	"height: 162\n"
 	"weight: 75\n");
  	return 0; }
+
+
+
+
+//ЗАДАЧА 4
+БАЗОВЫЕ ТИПЫ ДАННЫХ: 
+1. ЦЕЛЫЕ ЧИСЛА - int
+2. ВЕЩЕСТВЕННЫЕ ЧИСЛА - double
+3. СИМВОЛЫ - char
+
