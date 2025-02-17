@@ -74,3 +74,26 @@ int main(int argc, char *argv[])
 
 	return 0; }
 
+
+
+
+//ЗАДАЧА 5
+#include <stdio.h>
+#include <stdlib.h>
+/* Конвертация температуры
+1. Напишите программу на C, которая запрашивает у пользователя температуру в градусах Цельсия
+2. преобразует ее в градусы Фаренгейта
+3. выводит результат. */
+
+int main(int argc, char *argv[]) 
+{	float celsius, fahrenheit;              //ОБЪЯВЛЯЕТ ДВЕ ПЕРЕМЕННЫЕ С ПЛАВАЮЩЕЙ ТОЧКОЙ ДЛЯ ХРАНЕНИЯ ТЕМПЕРАТУРЫ
+	
+	printf("Enter the temperature in degrees Celsius: ");
+	scanf("%f", & celsius);                //СЧИТЫВАЕТ ВВЕДЕНОЕ ЗНАЧЕНИЕ И СОХРАНЯЕТ ЕГО В ПЕРЕМЕННУЮ celsius
+	
+	fahrenheit = ( celsius *9/5) + 32;
+	
+	printf("Enter the temperature in degrees Fahrenheit: %.2f\n", fahrenheit);
+    
+	return 0;}
+
