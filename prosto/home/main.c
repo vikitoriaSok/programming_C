@@ -158,3 +158,22 @@ int main(int argc, char *argv[])
 	c = a / b;
 	printf("%d",c);
     return 0;}
+
+
+
+
+//ЗАДАЧА 9
+#include <stdio.h>
+#include <stdlib.h>
+/* Напишите программу, которая выводит их сумму и среднее арифметическое */
+
+int main(int argc, char *argv[]) 
+{ 	int a = 10;
+	int b = 5;
+	int sum = a + b;
+	float d = sum/2;
+	
+	printf("%d\n",sum);
+	printf("%f\n",d);
+	
+	return 0;}
