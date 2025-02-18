@@ -240,3 +240,29 @@ int main(int argc, char *argv[])
 где:
 •  a, b, c - длины сторон треугольника
 •  p - полупериметр треугольника (p = (a + b + c) / 2) */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(int argc, char *argv[]) {
+	
+	float a,b,c,p,s;
+	
+	printf("vvedite a: \n");
+	scanf("%f", &a);
+	
+	printf("vvedite b: \n");
+	scanf("%f", &b);
+	
+	printf("vvedite c: \n");
+	scanf("%f", &c);
+	
+	p = ( a + b + c) / 2;
+	printf("p = %f\n", p);
+	
+	s = sqrt ( p * ( p - a) * ( p - b) * ( p - c) );
+	printf("s = %f\n", s);
+	
+	
+	return 0;
+}
