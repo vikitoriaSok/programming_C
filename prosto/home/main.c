@@ -176,3 +176,17 @@ int main(int argc, char *argv[])
 	printf("%d\n",sum);
 	printf("%f\n",d);
 	return 0;}
+
+//ЗАДАЧА 10
+#include <stdio.h>
+#include <stdlib.h>
+/* 1.Напишите программу, в которой определите три переменных типа int. 
+2.При этом третья переменная равна остатку от деления перевой переменной на вторую. */
+
+int main(int argc, char *argv[]) 
+{ 	int a = 10;
+	int b = 4;
+	int c = a % b ;
+	printf("a %% b = %d",c);
+	return 0;}
+
