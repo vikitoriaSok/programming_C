@@ -210,3 +210,22 @@ int main(int argc, char *argv[])
 //ЗАДАЧА 12
 /*Расчет среднего арифметического
 Напишите программу на C, которая запрашивает у пользователя три числа и вычисляет их среднее арифметическое.*/
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[])
+{	float a, b, c, d;
+
+	printf("vvedite a: \n");
+	scanf("%f", &a);
+	
+	printf("vvedite b: \n");
+	scanf("%f", &b);
+	
+	printf("vvedite c: \n");
+	scanf("%f", &c);
+	
+	d = (a + b + c)/3;
+	
+	printf(" d = %f\n", d);
+	
+	return 0;}
