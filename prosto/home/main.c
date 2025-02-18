@@ -175,5 +175,4 @@ int main(int argc, char *argv[])
 	
 	printf("%d\n",sum);
 	printf("%f\n",d);
-	
 	return 0;}
