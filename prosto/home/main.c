@@ -266,3 +266,21 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+
+//ЗАДАЧА 14 
+#include <stdio.h>
+#include <stdlib.h>
+/* Напишите программу обмена значений двух переменных типа int. Для обмена значениями используйте 4 способа:
+Обмен через третью переменную */
+
+int main(int argc, char *argv[])
+{	int a = 10;
+	int b = 4;
+	int c = a;
+	a = b;
+	b = c;
+	
+	printf ("a = %d\n", a);
+	printf ("b = %d\n", b);
+	printf ("c = %d\n", c);
+	return 0;}
