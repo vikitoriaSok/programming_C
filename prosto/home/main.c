@@ -365,3 +365,29 @@ int main(int argc, char *argv[])
 	}
 	
 	return 0;}
+
+
+//ЗАДАЧА 18
+#include <stdio.h>
+#include <stdlib.h>
+/* 1. Напишите программу, которая определяет переменную типа int со значением 5. 
+2. Используйте конструкцию switch..case для проверки, что значение переменной равно одному из значений из набора [4, 5, 6]. */
+int main(int argc, char *argv[]) {
+	
+	int num = 5;
+	switch(num)
+	
+	{
+		case 4:
+			printf("num = 4");
+			break;
+		case 5:
+			printf("num = 5");
+			break;
+		case 6:
+			printf("num = 6");
+	}
+	
+	
+	return 0;
+}
