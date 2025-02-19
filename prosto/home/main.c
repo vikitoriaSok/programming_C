@@ -289,3 +289,30 @@ int main(int argc, char *argv[])
 
 //УСЛОВНЫЕ КОНСТРУКЦИИ
 //ЗАДАЧА 15
+#include <stdio.h>
+#include <stdlib.h>
+
+/* 1.Напишите программу, которая проверят, равны ли две переменных. 
+2.Если они равно, то выводит "equal"
+3.если не равны, то выводит "not equal": */
+
+int main(int argc, char *argv[]) {
+	int a;
+	int b;
+	
+	printf("vvedite a:\n", a);
+	scanf("%d", &a);
+	
+	printf("vvedite b:\n", b);
+	scanf("%d", &b);
+	
+	if ( a == b)
+	 {
+	 	printf("equal");
+	 }
+	else
+	{
+		printf(" not equal ");
+	}
+	
+	return 0;}
