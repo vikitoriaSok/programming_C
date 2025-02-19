@@ -395,3 +395,19 @@ int main(int argc, char *argv[]) {
 //ЗАДАЧА 19
 /*1.Напишите программу, которая определяет три переменных типа int
 2. выводит на консоль переменную с наибольшим значением*/
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[])
+{	int a = 10 ;
+	int b = 15 ;
+	int c = 12 ;
+	int max = c;
+	
+	if ( a>b && a>c)
+		max = a;
+	else if ( b> a && b>c )
+		max = b;
+	
+	printf("max: %d", max);
+	
+	return 0;}
