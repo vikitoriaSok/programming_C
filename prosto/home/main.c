@@ -284,3 +284,8 @@ int main(int argc, char *argv[])
 	printf ("b = %d\n", b);
 	printf ("c = %d\n", c);
 	return 0;}
+
+
+
+//УСЛОВНЫЕ КОНСТРУКЦИИ
+//ЗАДАЧА 15
