@@ -340,3 +340,28 @@ int main(int argc, char *argv[]) {
 	}
 	
 	return 0;}
+
+
+//ЗАДАЧА 17
+#include <stdio.h>
+#include <stdlib.h>
+
+/* 1.Напишите программу, которая определяет переменную типа int и проверяет ее значение. 
+2. если значение переменной больше или равно 4 и одновременно меньше или равно 14, то на консоль выводится "within range [4..14]".
+3. В остальных случаях пусть на консоль выводится "out of range". */
+int main(int argc, char *argv[]) 
+{	int a;
+	
+	printf("vvedite a:\n", a);
+	scanf("%d", &a);
+	
+	if ( a >= 4 && a <= 14)
+	{
+		printf("within range [4..14]");
+	}
+	else
+	{
+		printf("out of range");
+	}
+	
+	return 0;}
