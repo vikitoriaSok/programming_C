@@ -115,8 +115,6 @@ int main(int argc, char** argv[]) {
 		printf("net korney\n");
 	}
 
-	printf("continue: yes or no");
-	scanf("%s , answer");
 	
 	return 0;
 }
