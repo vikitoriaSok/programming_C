@@ -1,11 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
+#define N 20
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main() {
+    int sieve[N] = {0}; // 0 - потенциально простое, 1 - составное
+    int i, j;
 
-int main(int argc, char *argv[]) 
-{
-	printf("Hello, Vika\n");     
-	printf("How old are you\n");
-	return 0;
+    // Исключаем 0 и 1
+    sieve[0] = sieve[1] = 1;
+
+    // Реализуем алгоритм "Решето Эратосфена"
+    for (i = 2; i * i < N; i++) {
+        if (sieve[i] == 0) { // Если i - простое
+            for (j = i * i; j < N; j += i) {
+                sieve[j] = 1; // Помечаем кратные i как составные
+            }
+        }
+    }
+
+    // Выводим простые числа
+    printf("Prime numbers up to %d: ", N);
+    for (i = 2; i < N; i++) {
+        if (sieve[i] == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+
+    return 0;
 }
+
+
