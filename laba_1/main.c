@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
         scanf("%s", answer);
 
         // Преобразование к нижнему регистру
-        for (i = 0; answer[i]; i++) {
+        for (i = 0; answer[i]; i++) { // Цикл for для перебора всех символов в строке answer
             answer[i] = tolower(answer[i]);
         }
 
