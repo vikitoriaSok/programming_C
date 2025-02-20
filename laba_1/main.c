@@ -163,7 +163,7 @@ int main(int argc, char *argv[]) {
             printf("x = %lf\n", x1);
         }
 
-        // Запрос на продолжение
+        // Запрос на продолжение // // Выводит на экран сообщение с просьбой ввести 'yes' или 'no' для продолжения/завершения программы
         printf("continue the program yes or no: ");
         scanf("%s", answer);
 
