@@ -173,7 +173,7 @@ int main(int argc, char *argv[]) {
         }
 
         // Проверка ответа
-        if (strcmp(answer, "no") == 0) {
+        if (strcmp(answer, "no") == 0) { // Сравнивает строку answer с "no" (регистрозависимо).  strcmp() возвращает 0, если строки равны.
             printf("The program is completed.\n");
             break; // Выход из цикла for
         } else if (strcmp(answer, "yes") == 0) {
