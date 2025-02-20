@@ -169,7 +169,7 @@ int main(int argc, char *argv[]) {
 
         // Преобразование к нижнему регистру
         for (i = 0; answer[i]; i++) { // Цикл for для перебора всех символов в строке answer
-            answer[i] = tolower(answer[i]);
+            answer[i] = tolower(answer[i]); // Преобразует текущий символ answer[i] в нижний регистр. tolower() находится в ctype.h
         }
 
         // Проверка ответа
