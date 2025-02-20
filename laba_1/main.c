@@ -126,7 +126,7 @@ int main(int argc, char** argv[]) {
 #include <stdio.h> //бибилиотека ввода-вывода
 #include <math.h> //математическая библиотека с функциями
 #include <string.h> //библиотека для работы со строками
-#include <ctype.h>
+#include <ctype.h> //библиотека для работы с символами
 
 int main(int argc, char *argv[]) {
     char answer[10];
