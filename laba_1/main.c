@@ -124,7 +124,7 @@ int main(int argc, char** argv[]) {
 
 //ЗАДАЧА 3. С ЦИКЛОМ. ДОМАШНЕЕ ЗАДАНИЕ
 #include <stdio.h> //бибилиотека ввода-вывода
-#include <math.h>
+#include <math.h> //математическая библиотека с функциями
 #include <string.h>
 #include <ctype.h>
 
