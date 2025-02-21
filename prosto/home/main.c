@@ -402,12 +402,9 @@ int main(int argc, char *argv[])
 	int b = 15 ;
 	int c = 12 ;
 	int max = c;
-	
 	if ( a>b && a>c)
 		max = a;
 	else if ( b> a && b>c )
 		max = b;
-	
 	printf("max: %d", max);
-	
 	return 0;}
