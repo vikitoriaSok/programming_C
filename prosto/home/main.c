@@ -408,3 +408,10 @@ int main(int argc, char *argv[])
 		max = b;
 	printf("max: %d", max);
 	return 0;}
+
+
+
+
+Циклы
+//ЗАДАЧА 20
+/* Напишите программу, которая c помощью циклов for и while выводит на консоль пять раз строку "Hello Work".*/
