@@ -415,3 +415,11 @@ int main(int argc, char *argv[])
 Циклы
 //ЗАДАЧА 20
 /* Напишите программу, которая c помощью циклов for и while выводит на консоль пять раз строку "Hello Work".*/
+#include <stdio.h>
+int main(int argc, char** argv) {
+	 for (int i = 0; i < 6; i++)
+    {
+        printf("%d", i);
+    }
+    return 0;
+}
