@@ -429,3 +429,13 @@ int main(int argc, char** argv) {
 
 //ЗАДАЧА 21
 /*выведем квадраты чисел от 0 до 8:*/
+#include <iostream>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+	for (int i=0; i<9; i++)
+	{	
+		printf("%d * %d = %d\n", i,i,i*i);
+	}
+    return 0;
+}
