@@ -16,7 +16,6 @@ int main(int argc, char *argv[]) {
 	a=1.2;
 	b=0.5;
 	c=3.3;
-
 	printf("vvedite a: \n");
 	scanf("%lf", &a);             //%lf — это вещественный формат двойной точности / числа с плавающей точкой типа double
 	printf("vvedite b: \n");      //SCANF - ВВОД ДАННЫХ
