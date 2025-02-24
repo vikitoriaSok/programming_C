@@ -13,7 +13,6 @@ run this program using the console pauser or add your own getch, system("pause")
 int main(int argc, char *argv[]) {
 	double a,b,c;                    //DOUBLE - ЧИСЛО С ПЛАВАЮЩЕЙ ТОЧКОЙ
 	double x1,x2,d;
-	
 	a=1.2;
 	b=0.5;
 	c=3.3;
