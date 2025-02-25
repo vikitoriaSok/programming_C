@@ -483,3 +483,24 @@ int main(void)
 
      
     return 0;	
+
+
+
+
+//ЗАЛАЧА 23
+#include <iostream>
+#include <stdio.h>
+/* Вывод чисел от 1 до 5*/
+
+int main(void)
+{	
+	int i = 1;
+	do
+	{
+		printf("%d", i);
+		i++;	
+	}
+	while (i<=5);
+	
+    return 0;
+}
