@@ -545,3 +545,21 @@ int main() {
 	
   return 0;
 }
+
+
+/////////////////////
+#include <stdio.h>
+
+
+int main() {
+
+	int a=20;
+	int b=4;
+	int sum=a+b;
+	int sr=((a+b)/2);
+	printf("summa = %d\n", sum);
+	printf("crednee = %d", sr);
+
+	
+  return 0;
+}
