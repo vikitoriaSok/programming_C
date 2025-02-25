@@ -504,3 +504,22 @@ int main(void)
 	
     return 0;
 }
+
+
+
+//ЗАДАЧА 24
+#include <iostream>
+#include <stdio.h>
+int main() {
+
+	int i=6;
+	while (i>0)
+	{
+		printf("%d\n", i);
+		i--;
+	}
+	
+  return 0;
+}
+
+
