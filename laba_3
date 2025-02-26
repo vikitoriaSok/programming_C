@@ -1,26 +1,22 @@
-#include <iostream>
-#include <ctype.h> //библиотека для работы с символами
+#include <stdio.h>
+#include <ctype.h>
 
-/* 1. Ввести с консоли строку символов произвольной длины (до 80 символов). 
-2. Поменять в ней все маленькие символы 'a' и 'b' на заглавные
-3. вывести на консоль полученную строку. */
+int main() {
+  char str[81];
+  int i = 0; 
 
-int main(int argc, char** argv) {
-	char str[81]; 
-	int i;        
-
-	printf("Enter a string of characters (no more than 80): ");
-	scanf("%s", str);
-
+  printf("Enter a string of characters (no more than 80): ");
+  scanf("%s", str);
 
   // Заменяем символы 'a' и 'b' на заглавные
-  for (i = 0; str[i] != '\0'; i++) { // Цикл: проходим по каждому символу строки
-    if (str[i] == 'a' || str[i] == 'b') { // Если текущий символ равен 'a' или 'b'
-      str[i] = toupper(str[i]); // Преобразуем символ в верхний регистр
-                               // toupper() - функция из ctype.h
+  while (str[i] != '\0') {
+    if (str[i] == 'a' || str[i] == 'b') {
+      str[i] = toupper(str[i]);
     }
+    i++;
   }
 
-  printf("Modified string: %s\n", str); // Выводим измененную строку
-	return 0;
+  printf("Modified string: %s\n", str);
+
+  return 0;
 }
