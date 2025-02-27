@@ -561,8 +561,7 @@ int main() {
 	printf("crednee = %d", sr);
 
 	
-  return 0;
-}
+  return 0;}
 
 
 
@@ -586,8 +585,7 @@ int main(void) {
 	{
 		printf("not equal");
 	}
-    return 0;
-}
+    return 0;}
 
 
 
@@ -608,8 +606,7 @@ int main(void) {
 		printf("out of range");
 	}
 	
-    return 0;
-}
+    return 0;}
 
 
 #include <stdio.h>
@@ -629,9 +626,6 @@ int main(void) {
 			break;
 		case 6:
 			printf("a=6");
-			break;
-	}
-	
-    return 0;
-}
+			break;}
+    return 0;}
 
