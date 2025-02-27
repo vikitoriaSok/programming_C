@@ -563,3 +563,29 @@ int main() {
 	
   return 0;
 }
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    int a;
+    int b;
+    
+    printf("enter a: \n");
+    scanf("%d", &a);
+    printf("enter b: \n");
+    scanf("%d", &b);
+    
+    if (a==b)
+    {
+    	printf("equal\n");
+	}
+	else
+	{
+		printf("not equal");
+	}
+    return 0;
+}
+
