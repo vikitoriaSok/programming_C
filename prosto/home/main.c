@@ -629,3 +629,16 @@ int main(void) {
 			break;}
     return 0;}
 
+
+
+
+//КОД НЕ РАБОТАЕТ ПОЧЕМУ
+#include <stdio.h>
+
+int main(void) {
+    for (int i = 1; i <= 10; i++) {
+        printf("%d ", i); // Добавлен пробел для удобства
+    }
+    printf("\n"); // Перенос строки в конце
+    return 0;
+}
