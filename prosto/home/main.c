@@ -589,3 +589,25 @@ int main(void) {
     return 0;
 }
 
+
+
+
+#include <stdio.h>
+
+int main(void) {
+	
+	int a;
+	printf("enter a:\n");
+	scanf("%d", &a);
+	if (a>4 && a<14)
+	{
+		printf("within range (4...14)");
+	}
+	else
+	{
+		printf("out of range");
+	}
+	
+    return 0;
+}
+
