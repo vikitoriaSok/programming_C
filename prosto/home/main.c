@@ -611,3 +611,27 @@ int main(void) {
     return 0;
 }
 
+
+#include <stdio.h>
+
+int main(void) {
+	
+	int a;
+	printf("enter a:\n");
+	scanf("%d", &a);
+	switch (a)
+	{
+		case 4:
+			printf("a=4");
+			break;
+		case 5:
+			printf("a=5");
+			break;
+		case 6:
+			printf("a=6");
+			break;
+	}
+	
+    return 0;
+}
+
