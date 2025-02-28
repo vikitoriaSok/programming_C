@@ -11,8 +11,6 @@ unsigned char nat [10000000];
 #define DEBUG  
 #undef DEBUG
 
-
-
 int main(int argc, char *argv[]) {
   int i, k;
   long N, Prime;
@@ -38,10 +36,8 @@ for (i=0; i<8; i++)
 
   nat[0]=CLRBIT(nat[0],0);
   
-  
   #endif
 
- 
   for (Prime = 2; Prime <= sqrt(N); Prime++) { 
     if (TESTBIT(nat[Prime / 8], Prime % 8)) {  
       for (k = Prime * Prime; k <= N; k += Prime) { 
