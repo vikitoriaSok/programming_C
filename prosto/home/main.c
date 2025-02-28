@@ -14,8 +14,6 @@ int main(int argc, char *argv[])
 //ЗАДАЧА 2
 #include <stdio.h>
 #include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int main(int argc, char *argv[]) 
 {	printf("Wake up, Neo...\n\n");
 	printf("The Matrix has you...\n\n");
