@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 
 
 
-
 //ЗАДАЧА 2
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,7 +25,6 @@ int main(int argc, char *argv[])
 
 
 
-
 //ЗАДАЧА 2.1
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +32,6 @@ int main(int argc, char *argv[])
 int main(int argc, char *argv[]) 
 {	printf("Wake up, Neo...\n\nThe Matrix has you...\n\nFollow the white rabbit...\n");
 	return 0;}
-
 
 
 //ЗАДАЧА 3
