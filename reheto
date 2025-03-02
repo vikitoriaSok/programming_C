@@ -37,7 +37,6 @@ for (i=0; i<8; i++)
   nat[0]=CLRBIT(nat[0],0);
   
   #endif
-
   for (Prime = 2; Prime <= sqrt(N); Prime++) { 
     if (TESTBIT(nat[Prime / 8], Prime % 8)) {  
       for (k = Prime * Prime; k <= N; k += Prime) { 
@@ -45,7 +44,6 @@ for (i=0; i<8; i++)
       }
     }
   }
-
   printf("Prostie chisla do N %ld:\n"); 
   for (i = 2; i <= N; i++) {
     if (TESTBIT(nat[i / 8], i % 8)) { 
@@ -53,7 +51,6 @@ for (i=0; i<8; i++)
     }
   }
   printf("\n");
-
   return 0;
 }
 
