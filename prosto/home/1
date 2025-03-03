@@ -23,3 +23,15 @@ int main(void) {
 	printf("numbers[2] = %d", numbers[2]);
 
 	return 0;}
+
+//ЗАДАЧА 
+/*Напишите программу, в которой определите массив символов и выведете его на консоль с помощью спецификатора %s:*/
+#include <stdio.h>
+
+int main(void) {
+
+	char message[]="Hello, Vika!";
+	printf("%s\n", message);
+	
+  return 0;
+}
