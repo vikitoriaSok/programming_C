@@ -81,3 +81,28 @@ int main()
     }
     return 0;
 }
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main() {
+
+  int a;
+  int b;
+  int c;
+
+  printf("Enter a:\n");
+  scanf("%d", &a);
+
+  printf("Enter b:\n");
+  scanf("%d", &b);
+
+  c = a * b;
+
+  printf("C = %d\n", c); 
+
+  return 0;
+}
+
+
