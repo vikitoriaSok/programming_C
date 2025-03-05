@@ -135,20 +135,47 @@ int main() {
 /*Вычисление индекса массы тела*/
 
 int main() {
-  
+
   int weight;
   int height;
-  float index; // Изменяем тип данных на float для точности
+  float index;
 
   printf("Enter your weight in kg:\n");
   scanf("%d", &weight);
-  
+
   printf("Enter your height in meters:\n");
   scanf("%d", &height);
+
+  index = (float)weight / (height * height);
+  printf("Your body mass index: %.2f\n", index);
+
+  if (index < 18.5) 
+  {
+    printf("Underweight\n");
+  }
   
-  index = (float)weight / (height * height); // Приведение типа для правильного результата
-  printf("Your body mass index: %.2f\n", index); // Используем %.2f для вывода float
+  if (index >= 18.5 && index <= 24.9) 
+  { 
+    printf("Normal weight\n");
+  }
+  
+  if (index >= 25.0 && index <= 29.9) 
+  { 
+    printf("Overweight\n");
+  }
+  
+  if (index > 30) 
+  {
+    printf("Fatness\n");
+  }
   
   return 0;
+
 }
+
+
+//Менее 18.5: Недостаточный вес
+// 18.5 - 24.9: Нормальный вес
+//  25.0 - 29.9: Избыточный вес
+//  30.0 и выше: Ожирение
 
