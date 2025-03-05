@@ -1,3 +1,6 @@
+
+
+
 //МАССИВЫ
 
 //ЗАДАЧА
@@ -127,4 +130,25 @@ int main() {
 }
 
 
+//ЗАДАЧА
+#include <stdio.h>
+/*Вычисление индекса массы тела*/
+
+int main() {
+  
+  int weight;
+  int height;
+  float index; // Изменяем тип данных на float для точности
+
+  printf("Enter your weight in kg:\n");
+  scanf("%d", &weight);
+  
+  printf("Enter your height in meters:\n");
+  scanf("%d", &height);
+  
+  index = (float)weight / (height * height); // Приведение типа для правильного результата
+  printf("Your body mass index: %.2f\n", index); // Используем %.2f для вывода float
+  
+  return 0;
+}
 
