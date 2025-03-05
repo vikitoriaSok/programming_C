@@ -93,6 +93,7 @@ int main() {
   int c;
   int w;
   int k;
+  int sum;
 
   printf("Enter a:\n");
   scanf("%d", &a);
@@ -108,6 +109,10 @@ int main() {
   
   k = a / b;
   printf("K = %d\n", k);
+  
+  sum = ((c + w)/k);
+  printf("sum = %d", sum);
+  
   
   return 0;
 }
