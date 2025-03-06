@@ -84,7 +84,6 @@ int main()
 
 //ЗАДАЧА
 #include <stdio.h>
-
 int main() {
 
   int a;
