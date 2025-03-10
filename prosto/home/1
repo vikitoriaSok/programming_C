@@ -15,6 +15,8 @@ int main(void) {
 	printf("num[0]=%d\n", num[0]);
 	printf("num[4]=%d", num[4]);}
 
+ 
+
 //ЗАДАЧА
 #include <stdio.h>
 int main(void) {
@@ -22,6 +24,8 @@ int main(void) {
 	int numbers[4] = { 1, 2, 3, 5 };       
 	printf("numbers[2] = %d", numbers[2]);
 	return 0;}
+
+
 
 //ЗАДАЧА 
 /*Напишите программу, в которой определите массив символов и выведете его на консоль с помощью спецификатора %s:*/
@@ -33,6 +37,10 @@ int main(void) {
 	printf("%s\n", message);
 	
   return 0;}
+
+
+
+
 
 
 //ЗАДАЧА
@@ -53,8 +61,10 @@ int main(void) {
 		printf("\n");
 	}
 
-  return 0;
-}
+  return 0;}
+
+
+
 
 
 //ЗАДАЧА
@@ -79,6 +89,7 @@ int main()
     }
     return 0;
 }
+
 
 
 //ЗАДАЧА
@@ -121,6 +132,10 @@ int main() {
   
   
   return 0;}
+
+
+
+
 
 //ЗАДАЧА
 #include <stdio.h>
@@ -167,10 +182,6 @@ int main() {
 //  25.0 - 29.9: Избыточный вес
 //  30.0 и выше: Ожирение
 
-
-
-
-//МАССИВЫ
 //ЗАДАЧА
 
 #include <stdio.h>
@@ -179,8 +190,12 @@ int main() {
   int a[] = {1, 2, 3, 4, 5}, s = 0;
   for (int i = 0; i < 5; i++) s += a[i];
   printf("summa: %d\n", s);
-  return 0;
-}
+  return 0;}
+
+
+
+
+
 
 //ЗАДАЧА
 #include <stdio.h>
@@ -194,8 +209,7 @@ int main(void)
     vika[3]=4;
     
     printf("vika[0]=%d\n", vika[0]);    
-    return 0;
-}
+    return 0;}
 
 
 //ЗАДАЧА
@@ -209,8 +223,7 @@ void hello_world()
 int main(void)
 {
   hello_world();
-    return 0;
-}
+    return 0;}
 
 
 
