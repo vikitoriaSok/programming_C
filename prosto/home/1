@@ -214,5 +214,29 @@ int main(void)
 
 
 
+//ЗАДАЧА
+#include <stdio.h>
+
+int vika(int a, int b) 
+{
+  int z; 
+  z = a + b;
+
+  return(z);
+}
+
+int main() {
+  int a = 2;
+  int b = 8;
+  int result;
+
+  result = vika(a, b);
+  printf("Result: %d\n", result); 
+
+  return 0;
+}
+
+
+
 
 
