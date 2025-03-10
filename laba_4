@@ -40,7 +40,6 @@ int main(int argc, char *argv[]) {
     printf("Incorrect input: The triangle does not exist.\n");
   }
 
-  return 0;
-}
+  return 0;}
 
 
