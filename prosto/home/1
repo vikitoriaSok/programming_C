@@ -291,6 +291,7 @@ int main() {
 	int sum;
 	int difference;
 	int composition;
+	int privat;
 	
 	printf("Enter number: ");
 	scanf("%d", &num1);
@@ -305,11 +306,13 @@ int main() {
 	printf("Difference = %d\n", difference);
 	
 	composition = num1 * num2;
-	printf("Composition = %d", composition);
+	printf("Composition = %d\n", composition);
+	
+	privat = num1 / num2 ;
+	printf("Privat = %d\n", privat);
 	
   return 0;
 }
-
 
 
 
