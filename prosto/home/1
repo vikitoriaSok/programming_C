@@ -289,6 +289,8 @@ int main() {
 	int num1;
 	int num2;
 	int sum;
+	int difference;
+	int composition;
 	
 	printf("Enter number: ");
 	scanf("%d", &num1);
@@ -297,11 +299,18 @@ int main() {
 	scanf("%d", &num2);
 	
 	sum = num1 + num2;
-	printf("Summa = %d", sum);
+	printf("Summa = %d\n", sum);
 	
-	nsum = num1-num2;
-
+	difference = num1-num2;
+	printf("Difference = %d\n", difference);
+	
+	composition = num1 * num2;
+	printf("Composition = %d", composition);
+	
   return 0;
 }
+
+
+
 
 
