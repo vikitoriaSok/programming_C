@@ -308,12 +308,16 @@ int main() {
 	composition = num1 * num2;
 	printf("Composition = %d\n", composition);
 	
-	privat = num1 / num2 ;
-	printf("Privat = %d\n", privat);
-	
+	if (num2!=0)
+{
+	printf("Privat = %d\n", num1/num2);
+}
+	else
+	{
+	printf("Mistake!\n");
+	}
   return 0;
 }
-
 
 
 
