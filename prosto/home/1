@@ -330,6 +330,19 @@ int main() {
 	printf("Enter numbers: ");
 	scanf("%d", &num);
 	
+	if (num<0)
+	{
+		printf("the number is negative\n");
+	}
+	
+	else if (num>0)
+	{
+		printf("the number is positive\n");
+	}
+	else
+	{
+		printf("the number is zero\n");
+	}
   return 0;
 }
 
