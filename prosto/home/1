@@ -386,3 +386,37 @@ int main() {
 }
 
 
+
+#include <stdio.h>
+#include <math.h>
+/*Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P*/
+
+int main() {
+  
+  int side1;
+  int side2;
+  int m;
+  int hypotenuse;
+  int perimeter;
+  
+  printf("Enter side one: ");
+  scanf("%d", &side1);
+  
+  printf("Enter side two: ");
+  scanf("%d", &side2);
+  
+  m = side1 + side2;
+  printf("a + b = %d\n", m);
+  
+  hypotenuse = sqrt(m);
+  printf("hypotenuse = %d\n", hypotenuse);
+  
+  perimeter = side1 + side2 + hypotenuse;
+  printf("perimeter = %d", perimeter);
+  
+  
+
+  
+  return 0;
+}
+
