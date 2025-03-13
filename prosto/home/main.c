@@ -1,10 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Дана сторона квадрата a. Найти его периметр P = 4·a */
 
 int main(int argc, char *argv[]) {
 	
-	printf("vika");
+	int a;
+	int p;
+	
+	printf("Enter a: ");
+	scanf("%d", &a);
+	
+	p = 4 * a;
+	printf("Perimeter = %d", p);
+	
+	
+
 	return 0;
 }
