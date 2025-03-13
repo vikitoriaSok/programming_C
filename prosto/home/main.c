@@ -27,20 +27,19 @@ int main(int argc, char *argv[]) {
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Дана сторона квадрата a. Найти его площадь S = a2 */
+/*Дана сторона квадрата a. Найти его площадь S = a^2 */
 
 int main(int argc, char *argv[]) {
 	
 	int a;
-	int p;
+	int s;
 	
 	printf("Enter a: ");
 	scanf("%d", &a);
 	
-	p = 4 * a;
-	printf("Perimeter = %d", p);
-	
-	
+	s = a * a;
+	printf("S = %d", s);
 
-	return 0;
-}
+	return 0;}
+
+//ЗАДАЧА 3
