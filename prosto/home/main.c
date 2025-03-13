@@ -1,3 +1,6 @@
+//Ввод и вывод данных, оператор присваивания
+//ЗАДАЧА 1
+	
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,7 +17,5 @@ int main(int argc, char *argv[]) {
 	p = 4 * a;
 	printf("Perimeter = %d", p);
 	
-	
-
 	return 0;
 }
