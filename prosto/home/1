@@ -368,4 +368,21 @@ int main() {
 
 
 //ЗАДАЧА
-*/Дана сторона квадрата a. Найти его площадь S=a2/*
+#include <stdio.h>
+/*Дана сторона квадрата a. Найти его площадь S*/
+
+int main() {
+  
+  int a;
+  int s;
+  
+  printf("Enter a: ");
+  scanf("%d", &a);
+  
+  s=a*a;
+  printf("S = %d", s);
+
+  return 0;
+}
+
+
