@@ -70,5 +70,6 @@ int main(int argc, char *argv[]) {
 	p = 2 * (a + b);
 	printf("Perimeter = %d", p);
 
-	return 0;
-}
+	return 0;}
+
+//ЗАДАЧА 4
