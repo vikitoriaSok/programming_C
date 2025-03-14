@@ -120,6 +120,41 @@ int main(int argc, char *argv[]) {
 	
 	s=6*a*a;
 	printf("Square = %d", &s);
+	return 0;}
+
+//ЗАДАЧА 6
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Даны длины ребер a, b, c прямоугольного параллелепипеда. 
+Найти его объем V = a·b·c
+площадь поверхности S = 2·(a·b + b·c + a·c). */
+
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int b;
+	int c;
+	int v;
+	int s;
+	
+	printf("Enter a: ");
+	scanf("%d", &a);
+	printf("Enter b: ");
+	scanf("%d", &b);
+	printf("Enter c: ");
+	scanf("%d", &c);
+	
+	v = a* b * c;
+	printf("V = %d\n", v);
+	
+	s = 2*(a*b + b*c + a*c);
+	printf("S = %d", &s);	
 	
 	return 0;}
-//ЗАДАЧА 6
+
+
+
+
+//ЗАДАЧА 7
