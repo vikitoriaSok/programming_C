@@ -94,3 +94,7 @@ int main(int argc, char *argv[]) {
 	printf("Circumference length = %f", l);
 
 	return 0;}
+
+
+
+//ЗАДАЧА 5
