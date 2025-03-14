@@ -73,3 +73,24 @@ int main(int argc, char *argv[]) {
 	return 0;}
 
 //ЗАДАЧА 4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Дан диаметр окружности d. 
+Найти ее длину L = П·d. В качестве значения П использовать 3.14. */
+
+int main(int argc, char *argv[]) {
+	
+	float d;
+	float l;
+	float p;
+	
+	printf("Enter diameter: ");
+	scanf("%f", &d);
+	
+	p = 3.14;
+	l = p * d;
+	printf("Circumference length = %f", l);
+
+	return 0;}
