@@ -98,3 +98,28 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 5
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Дана длина ребра куба a. 
+Найти объем куба V = a^3
+площадь его поверхности S = 6·a^2. */
+
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int v;
+	int s;
+	
+	printf("Enter a: ");
+	scanf("%d", &a);
+	
+	v=a*a*a;
+	printf("Volume = %d\n", v);
+	
+	s=6*a*a;
+	printf("Square = %d", &s);
+	
+	return 0;}
+//ЗАДАЧА 6
