@@ -47,18 +47,28 @@ int main(int argc, char *argv[]) {
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b). */
+/*Даны стороны прямоугольника a и b
+Найти его площадь S = a·b
+периметр P = 2·(a + b). */
 
 int main(int argc, char *argv[]) {
 	
 	int a;
+	int b;
 	int s;
+	int p;
 	
 	printf("Enter a: ");
 	scanf("%d", &a);
 	
-	s = a * a;
-	printf("S = %d", s);
+	printf("Enter b: ");
+	scanf("%d", &b);
+	
+	s = a*b;
+	printf("Square = %d\n", s);
+	
+	p = 2 * (a + b);
+	printf("Perimeter = %d", p);
 
 	return 0;
 }
