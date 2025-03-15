@@ -158,8 +158,33 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 7
-Найти длину окружности L и площадь круга S заданного радиуса R:
+#include <stdio.h>
+#include <stdlib.h>
 
-L = 2·π·R,        S = π·R2.
+/* Найти длину окружности L и площадь круга S заданного радиуса R:
 
-В качестве значения π использовать 3.14.
+L = 2·П·R,        S = П·R^2.
+
+В качестве значения П использовать 3.14. */
+
+int main(int argc, char *argv[]) {
+	
+	float l;
+	float s;
+	float r;
+	float p;
+	
+	printf("Enter radius: ");
+	scanf("%f", &r);
+	
+	p = 3.14;
+	l = 2 * p * r;
+	printf ("Circumference length = %f\n", l);
+	
+	s = p * r * r;
+	printf("The area of the circle = %f", s);
+	
+	return 0;}
+
+
+//ЗАДАЧА 8
