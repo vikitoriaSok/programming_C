@@ -164,8 +164,14 @@ int main(int argc, char *argv[]) {
 
     printf("1-prodolzit any other key - exit\n"); 
     scanf("%d", &y);
+    if (y != 1)
+    {
+    	break;
+	}
   } while (1 == y);
 
   return 0;
 }
+
+
 
