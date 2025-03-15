@@ -188,3 +188,19 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 8
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Даны два числа a и b. Найти их среднее арифметическое: (a + b)/2. */
+
+int main(int argc, char *argv[]) {
+	
+	float
+	
+	
+	
+	return 0;
+}
+
+
+
