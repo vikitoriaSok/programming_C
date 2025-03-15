@@ -195,12 +195,23 @@ int main(int argc, char *argv[]) {
 
 int main(int argc, char *argv[]) {
 	
-	float
+	float a;
+	float b;
+	float c;
+	
+	printf("Enter a: ");
+	scanf("%f", &a);
+	printf("Enter b: ");
+	scanf("%f", &b);
+	
+	c = (a + b)/2;
+	printf("c = %f", c);
 	
 	
 	
 	return 0;
 }
+
 
 
 
