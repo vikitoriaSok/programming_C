@@ -288,3 +288,40 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 11
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Даны два ненулевых числа. Найти сумму, разность, произведение и частное их модулей. */
+
+int main(int argc, char *argv[]) {
+  
+  int a;
+  int b;
+  int sum;
+  int dif;
+  int comp;
+  float priv; 
+
+  printf("Enter a: ");
+  scanf("%d", &a);
+  printf("Enter b: ");
+  scanf("%d", &b);
+  
+  if (a == 0 || b == 0) // Проверка на ноль
+  {
+    printf("Error: Non-zero numbers required.\n"); 
+    exit(1);
+  }
+
+  sum = abs(a) + abs(b); // Использование abs
+  printf("Summa = %d\n", sum);
+  dif = abs(a) - abs(b); // Использование abs
+  printf("Different = %d\n", dif);
+  comp = abs(a) * abs(b); // Использование abs
+  printf("Composition = %d\n", comp);
+  
+  priv = (float)abs(a) / abs(b); // abs, float
+  printf("Private = %.2f\n", priv); // %f и ограничение знаков
+
+  return 0;
+}
