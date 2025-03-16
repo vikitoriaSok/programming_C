@@ -255,10 +255,35 @@ int main(int argc, char *argv[]) {
 /* Даны два ненулевых числа. Найти сумму, разность, произведение и частное их квадратов.*/
 
 int main(int argc, char *argv[]) {
-  
+	
+	int a;
+	int b;
+	int sum;
+	int dif;
+	int comp;
+	int priv;
+	
+	printf("Enter a: ");
+	scanf("%d", &a);
+	printf("Enter b: ");
+	scanf("%d", &b);
+	
+	if (a<0 || b<0)
+	{
+		printf("Error");
+		exit(1);
+	}
+	sum = a + b;
+	printf("Summa = %d\n", sum);
+	dif = a - b;
+	printf("Different = %d\n", dif);
+	comp = a * b;
+	printf("Composition = %d\n", comp);
+	priv = (a*a)/(b*b);
+	printf("Private = %d\n", priv);
+	
 
+  return 0;}
 
-  return 0;
-}
 
 
