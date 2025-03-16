@@ -248,4 +248,17 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 10
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/* Даны два ненулевых числа. Найти сумму, разность, произведение и частное их квадратов.*/
+
+int main(int argc, char *argv[]) {
+  
+
+
+  return 0;
+}
+
 
