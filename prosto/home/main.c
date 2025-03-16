@@ -213,6 +213,34 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 9
-/*Даны два неотрицательных числа a и b. Найти их среднее геометрическое, т. е. квадратный корень из их произведения: (a·b)^1/2.*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/* Даны два неотрицательных числа a и b. 
+Найти их среднее геометрическое, т. е. квадратный корень из их произведения: (a·b)^1/2*/
+
+int main(int argc, char *argv[]) {
+  
+  int a;
+  int b;
+  int c;
+  double d;
+  
+  printf ("Enter a: ");
+  scanf("%d", &a);
+  printf("Enter b: ");
+  scanf("%d", &b);
+  if (a<0 || b<0)
+  {
+  	printf("Error");
+  	exit(1);
+  }
+  
+  c = (a*b);
+  d = pow(c, 1.2);
+  printf("Arithmetic mean = %lf", d);
+
+  return 0;}
 
 
