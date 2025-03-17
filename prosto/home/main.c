@@ -400,3 +400,33 @@ int main(int argc, char *argv[]) {
 	printf("The value of the y function = %d", y);
   
   return 0;}
+
+
+
+
+
+
+
+//ЛОГИЧЕСКИЕ ВЫРАЖЕНИЯ
+//ЗАДАЧА 1
+#include <stdio.h>
+#include <stdlib.h>
+/* Дано целое число A. Проверить истинность высказывания: «Число A является положительным». */
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	
+	if (A>=0)
+	{
+		printf("The number is positive!");
+	}
+	else
+	{
+		printf("Error");
+		exit(1);
+	}
+    return 0;}
