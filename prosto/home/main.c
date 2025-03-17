@@ -328,4 +328,25 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 12
-/*Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P:*/
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P */
+
+int main(int argc, char *argv[]) {
+  
+  int a;
+  int b;
+  int c;
+  int p;
+  
+  printf("Enter side A: ");
+  scanf("%d", &a);
+  printf("Enter side B: ");
+  scanf("%d", &b);
+  c = sqrt(a*a + b*b);
+  printf("Hypotenuse = %d\n", c);
+  p = a + b + c;
+  printf("Perimeter = %d\n", p);
+
+  return 0;}
