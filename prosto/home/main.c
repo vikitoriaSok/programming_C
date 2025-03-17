@@ -384,3 +384,19 @@ int main(int argc, char *argv[]) {
 
 //ЗАДАЧА 25
 /*Найти значение функции y = 3x6 − 6x2 − 7 при данном значении x.*/
+#include <stdio.h>
+#include <stdlib.h>
+/* Найти значение функции y = 3x^6 - 6x^2 - 7 при данном значении x. */
+
+int main(int argc, char *argv[]) {
+	
+	int x;
+	int y;
+	
+	printf("Enter x: ");
+	scanf("%d", &x);
+	
+	y = 3 * pow (x,6) - 6 * pow(x,2) - 7;
+	printf("The value of the y function = %d", y);
+  
+  return 0;}
