@@ -350,3 +350,36 @@ int main(int argc, char *argv[]) {
   printf("Perimeter = %d\n", p);
 
   return 0;}
+
+
+//ЗАДАЧА 14
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Дана длина L окружности. 
+Найти ее радиус R и площадь S круга, ограниченного этой окружностью, 
+учитывая, что L = 2·П·R,    S = П·R^2. 
+В качестве значения П использовать 3.14. */
+
+int main(int argc, char *argv[]) {
+  
+  int l;
+  float p;
+  int R;
+  int S;
+  
+  printf("Enter the length of the circle: ");
+  scanf("%d", &l);
+  
+  p = 3.14;
+  
+  R = (l / 2 * p);
+  printf("Radius = %d\n", R);
+  
+  S = (p * R * R);
+  printf("Square = %d", S);
+  
+  return 0;
+}
+
+
