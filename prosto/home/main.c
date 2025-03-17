@@ -434,3 +434,24 @@ int main(int argc, char *argv[]) {
 
 //ЗАДАЧА 2
 /* Дано целое число A. Проверить истинность высказывания: «Число A является нечетным».*/
+#include <stdio.h>
+#include <stdlib.h>
+/*  Дано целое число A. Проверить истинность высказывания: «Число A является нечетным». */
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	
+	printf("Enter a: ");
+	scanf("%d", &A);
+	if (A%2==1)
+	{
+		printf("%d is odd.\n", A);
+	}
+	else
+	{
+		printf("%d is even.\n", A);
+	}
+  
+  return 0;}
+
