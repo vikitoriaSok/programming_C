@@ -496,7 +496,7 @@ int main(int argc, char *argv[]) {
 	scanf("%d", &A);
 	printf("Enter B: ");
 	scanf("%d", &B);
-	if (A>2 && B<=3)
+	if (A>=0 || B<-2)
 	{
 		printf("Inequality is fair!");
 	}
@@ -504,8 +504,10 @@ int main(int argc, char *argv[]) {
 	{
 		printf("Inequality is unfair");
 	}
-  
+
   return 0;
 }
+
+
 
 
