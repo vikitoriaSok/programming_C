@@ -482,3 +482,30 @@ int main(int argc, char *argv[]) {
   return 0;}
 
 
+//ЗАДАЧА 5
+#include <stdio.h>
+#include <stdlib.h>
+/*  Даны два целых числа: A, B. Проверить истинность высказывания: «Справедливы неравенства A >= 0 или B <-2». */
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	int B;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	printf("Enter B: ");
+	scanf("%d", &B);
+	if (A>2 && B<=3)
+	{
+		printf("Inequality is fair!");
+	}
+	else
+	{
+		printf("Inequality is unfair");
+	}
+  
+  return 0;
+}
+
+
