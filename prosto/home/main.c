@@ -560,3 +560,6 @@ int main(int argc, char *argv[]) {
 
 
 
+
+
+//ЗАДАЧА 3
