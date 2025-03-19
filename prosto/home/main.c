@@ -571,27 +571,33 @@ int main(int argc, char *argv[]) {
 если нулевым, то заменить его на 10. Вывести полученное число. */
 
 int main(int argc, char *argv[]) {
-	
-	int A;
-	
-	printf("Enter A: ");
-	scanf("%d", &A);
-	
-	if (A>0)
-	{
-		A=A-8;
-	}
-	if else (A<0)
-	{
-		A=A+6;
-	}
-	else
-	{
-		A=10;
-	}
-	printf("NUMBER = %d", A);
+  
+  int A;
+  
+  printf("Enter A: ");
+  scanf("%d", &A);
+  
+  if (A>0)
+  {
+    A=A-8;
+  }
+  else if (A<0)
+  {
+    A=A+6;
+  }
+  else
+  {
+    A=10;
+  }
+  printf("NUMBER = %d", A);
 
   return 0;
 }
+
+
+
+
+//ЗАДАЧА 4
+
 
 
