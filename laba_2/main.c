@@ -59,33 +59,36 @@ int main() {
 
 
 //ЗАДАЧА 
-#include <stdio.h>
 #include <math.h>
 
 int main() {
 
-  double a[3][3], sum1 = 0, sum2 = 0;
+  double sum1 = 0, sum2 = 0;
   int i, j, n, N, k;
 
-  printf("Enter 9 numbers for the array double\n"); 
-  for (i = 0; i < 3; i++)                     
-    for (j = 0; j < 3; j++)                    
+printf("Enter the size of the matrix: ");   
+scanf("%d", &n);
+double a[n][n]; 
+  N = pow(n, 2); 
+  printf("Enter %d numbers for the array int:\n", N); 
+  for (i = 0; i < n; i++)                     
+    for (j = 0; j < n; j++)                    
       scanf("%lf", &a[i][j]);                 
 
-  for (i = 0; i < 3; i++) {               
+  for (i = 0; i < n; i++) {               
     sum1 += a[i][i];                           
-    sum2 += a[i][2 - i];                          
+    sum2 += a[i][(n-1) - i];                          
   }
 
-  printf("The sum of the main diagonal %.2lf\n", sum1);   
-  printf("The sum of the side diagonal %.2lf\n", sum2);      
-  printf("Enter n (n * n) ");
+  printf("The sum of the main diagonal: %.2lf\n", sum1);   
+  printf("The sum of the side diagonal: %.2lf\n", sum2);      
+  printf("Enter the size of the matrix: ");
   scanf("%d", &n); 
 
   int b[n][n], c[n][n]; 
   N = pow(n, 2); 
 
-  printf("\nEnter %d chisel\n", N);
+  printf("\nEnter %d chisel:\n", N);
   for (i = 0; i < n; i++) {  
     for (j = 0; j < n; j++) {  
       scanf("%d", &b[i][j]); 
@@ -102,7 +105,7 @@ int main() {
     }
   }
 
-  printf("\n\n");
+  printf("\n:\n");
   for (i = 0; i < n; i++) { 
     for (j = 0; j < n; j++) { 
       printf("%d ", c[i][j]); 
@@ -112,3 +115,4 @@ int main() {
 
   return 0;
 }
+
