@@ -598,7 +598,6 @@ int main(int argc, char *argv[]) {
 
 
 //ЗАДАЧА 4
-/*Даны три числа. Найти сумму двух наибольших из них.*/
 #include <stdio.h>
 #include <stdlib.h>
 /*Даны три числа. Найти сумму двух наибольших из них.*/
@@ -618,22 +617,25 @@ int main(){
 	scanf("%d", &num3);
 	
 	// Находим два наибольших числа
-  if (num1 <= num2 && num1 <= num3) {
+  if (num1 <= num2 && num1 <= num3)
+   {
     // a - наименьшее, складываем b и c
     sum = num2 + num3;
-  } else if (num2 <= num1 && num2 <= num3) {
+  } 
+  else if (num2 <= num1 && num2 <= num3)
+   {
     // b - наименьшее, складываем a и c
     sum = num1 + num3;
-  } else {
+  } 
+  else 
+  {
     // c - наименьшее, складываем a и b
     sum = num1 + num2;
   }
 
-  printf("Сумма двух наибольших чисел: %d\n", sum);
+  printf("The sum of the two largest numbers: %d\n", sum);
 
 	
     return 0;
 }
-
-
 
