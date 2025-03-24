@@ -702,7 +702,7 @@ int main(){
 	
 	int month;
 	printf("Enter the month number from 1 to 12: ");
-	scanf("%d", month);
+	scanf("%d", &month);
 	
 	switch (month)
 	{
@@ -716,6 +716,18 @@ int main(){
 		case 5:
 			printf("SPRING");
 			break;
+		case 6:
+		case 7:
+		case 8:
+			printf("SUMMER");
+			break;
+		case 9:
+		case 10:
+		case 11:
+			printf("AUTUMN");
+			break;
+		default:
+			printf("ERRIR");
 			
 	}
 	
