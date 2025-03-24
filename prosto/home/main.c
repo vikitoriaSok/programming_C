@@ -644,4 +644,46 @@ int main(){
 
 ОПЕРАТОР ВЫБОРА
 //ЗАДАЧА
-/*Дано целое число в диапазоне 1–7. Вывести строку — название дня недели, соответствующее данному числу (1 — «понедельник», 2 — «вторник» и т. д.).*/
+#include <stdio.h>
+#include <stdlib.h>
+/*Дано целое число в диапазоне 1–7. 
+Вывести строку — название дня недели, соответствующее данному числу (1 — «понедельник», 2 — «вторник» и т. д.).*/
+
+int main(){
+	
+	int day;
+	
+	printf("Enter a number from 1 to 7: ");
+	scanf("%d", &day);
+	
+	switch (day)
+	{
+		case 1:
+			printf("Monday");
+			break;
+		
+		case 2:
+			printf("Tuesday");
+			break;
+		case 3:
+			printf("Wednesday");
+			break;
+		case 4:
+			printf("Thursday");
+			break;
+		case 5:
+			printf("Friday");
+			break;
+		case 6:
+			printf("Saturday");
+			break;
+		case 7:
+			printf("Sunday");
+			break;
+		default:
+			printf("ERROR");
+	}
+	
+	
+    return 0;
+}
