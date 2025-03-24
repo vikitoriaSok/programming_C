@@ -711,6 +711,12 @@ int main(){
 		case 2:
 			printf("WINTER");
 			break;
+		case 3:
+		case 4:
+		case 5:
+			printf("SPRING");
+			break;
+			
 	}
 	
     return 0;
