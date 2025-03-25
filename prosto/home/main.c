@@ -757,8 +757,34 @@ int main(){
   for (kg = 1; kg <= 10; kg++) {
     cost = price_1_kg * kg;
     printf("%d kg: %.2f rubles.\n", kg, cost);
+  } return 0;}
+
+
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Дано вещественное число — цена 1 кг конфет. Вывести стоимость 1.2, 1.4, …, 2 кг конфет.*/
+
+int main() {
+	
+  float price_per_kg;
+  float kg;
+  float cost;
+
+  printf("Enter the price for one kg of candy: ");
+  scanf("%f", &price_per_kg);
+
+  printf("Cost:\n");
+  for (kg = 1.2; kg <= 2.0; kg += 0.2) {
+    cost = price_per_kg * kg;
+    printf("%.1f kg: %.2f rubles.\n", kg, cost);
   }
-		
-    return 0;
+
+  return 0;
 }
+
+
 
