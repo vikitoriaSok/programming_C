@@ -736,7 +736,7 @@ int main(){
 
 
 
-
+//Цикл с параметром
 //ЗАДАЧА
 #include <stdio.h>
 #include <stdlib.h>
@@ -750,18 +750,15 @@ int main(){
   int kg;
   float cost;
 
-  printf("Введите цену за 1 кг конфет: ");
-  scanf("%f", &price_per_kg);
+  printf("Enter the price for one kg of candy: ");
+  scanf("%f", &price_1_kg);
 
-  printf("Стоимость:\n");
+  printf("Coast:\n");
   for (kg = 1; kg <= 10; kg++) {
-    cost = price_per_kg * kg;
-    printf("%d кг: %.2f руб.\n", kg, cost);
+    cost = price_1_kg * kg;
+    printf("%d kg: %.2f rubles.\n", kg, cost);
   }
-
-
-
-		
 		
     return 0;
 }
+
