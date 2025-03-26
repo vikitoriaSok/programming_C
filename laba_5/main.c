@@ -7,129 +7,115 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "func.h"
 
 int main() {
-  int N;          // Размер матрицы (n x n)
-  double **mat1;  // Указатель на первую матрицу
-  double **mat2;  // Указатель на вторую матрицу
-  char f;
-  
-  
-  
-  printf("Enter the size of the matrix: ");
-  scanf("%d", &N);
-  
-  
-  
-  //Выделяем память для mat1 (с проверкой ошибок)
-  mat1 = (double **)malloc(N * sizeof(double *)); // Память под строки
-  
-  if (!mat1) 
-  {  // !mat1 равно mat1 == NULL
-    perror("MEMORE ERROR mat1");
-    return 1; 
-  }
-  
-  for (int i = 0; i < N; i++) 
-  {
-    mat1[i] = (double *)malloc(N * sizeof(double)); // Память под элементы в строке
-    if (!mat1[i]) 
-	{
-      perror("MEMORE ERROR mat1[i]");
-      // Освобождаем ранее выделенную память 
-      for (int j = 0; j < i; j++) 
-	  {
-        free(mat1[j]);
-      }
-      free(mat1);
-      return 1;
+    int N;
+    double **mat1;  // Изменено на double**
+    double **mat2;
+    double **result = NULL;
+    char f;
+    int i, j;
+
+    printf("Enter the size of the matrix: ");
+    scanf("%d", &N);
+
+    // Выделяем память для mat1 (с проверкой ошибок)
+    mat1 = (double**)malloc(N * sizeof(double *)); // Память под строки
+    if (!mat1) {
+        perror("MEMORY ERROR mat1");
+        return 1;
     }
-  }
-  
-  
-  
-  
-  mat2 = (double **)malloc(N * sizeof(double *));
-  
-  if (!mat2) 
-  {
-    perror("MEMORE ERROR mat2");
-    // Освобождаем память, выделенную для mat1, если что-то пошло не так.
-    for (int i = 0; i < N; i++) 
-	{
-      free(mat1[i]);
+    for (i = 0; i < N; i++) {
+        mat1[i] = (double*)malloc(N * sizeof(double)); // Память под элементы в строке
+        if (!mat1[i]) {
+            perror("MEMORY ERROR mat1[i]");
+            // Освобождаем ранее выделенную память
+            for (j = 0; j < i; j++) {
+                free(mat1[j]);
+            }
+            free(mat1);
+            return 1;
+        }
+    }
+
+    mat2 = (double **)malloc(N * sizeof(double *));
+    if (!mat2) {
+        perror("MEMORY ERROR mat2");
+        // Освобождаем память, выделенную для mat1, если что-то пошло не так.
+        for (i = 0; i < N; i++) {
+            free(mat1[i]);
+        }
+        free(mat1);
+        return 1;
+    }
+    for (i = 0; i < N; i++) {
+        mat2[i] = (double *)malloc(N * sizeof(double));
+        if (!mat2[i]) {
+            perror("MEMORY ERROR mat2[i]");
+            // Освобождаем ранее выделенную память.
+            for (j = 0; j < i; j++) {
+                free(mat2[j]);
+            }
+            free(mat2);
+            for (j = 0; j < N; j++) {
+                free(mat1[j]);
+            }
+            free(mat1);
+            return 1;
+        }
+    }
+
+    printf("Enter the elements of the matrix one:\n");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            printf("mat1[%d][%d]: ", i, j);
+            scanf("%lf", &mat1[i][j]); // Вводим значения с клавиатуры
+        }
+    }
+
+    // УДАЛЕН ПОВТОРНЫЙ ВВОД РАЗМЕРА МАТРИЦЫ
+    printf("Enter the elements of the matrix two:\n");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            printf("mat2[%d][%d]: ", i, j);
+            scanf("%lf", &mat2[i][j]);  // ИСПРАВЛЕНО: ввод в mat2
+        }
+    }
+
+    printf("Enter the operation sign: + / - / * \nYour answer: ");
+    scanf(" %c", &f);
+    printf("\n");
+
+    result = calc(N, (double*)mat1, mat2, f); // Вызов calc, пока без изменений
+
+    if (result != NULL) {
+        printf("Result:\n");
+        for (i = 0; i < N; i++){
+            for (j = 0; j < N; j++){
+                printf("%.2lf ", result[i][j]);  // Используем %.2lf для double
+            }
+            printf("\n");
+        }
+           // Освобождение памяти для результирующей матрицы
+        for (i = 0; i < N; i++) {
+            free(result[i]);
+        }
+        free(result);
+
+    } else {
+      printf("Вычисление не удалось.\n");
+    }
+
+    // Освобождаем память
+    for (i = 0; i < N; i++) {
+        free(mat1[i]);
+        free(mat2[i]);
     }
     free(mat1);
-    return 1;
-  }
-  
-  for (int i = 0; i < N; i++)
-   {
-    mat2[i] = (double *)malloc(N * sizeof(double));
-    if (!mat2[i]) 
-	{
-      perror("MEMORE ERROR mat2[i]");
-      // Освобождаем ранее выделенную память.
-      for (int j = 0; j < i; j++) 
-	  {
-        free(mat2[j]);
-      }
-      free(mat2);
-      for (int j = 0; j < N; j++)
-	   {
-          free(mat1[j]);
-      }
-      free(mat1);
-      return 1;
-    }
-  }
-
-
-
-
-
-printf("Enter the elements of the matrix one:\n");
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N; j++) {
-      printf("mat1[%d][%d]: ", i, j);
-      scanf("%lf", &mat1[i][j]); //Вводим значения с клавиатуры
-    }
-  }
-  
-  
-printf("Enter the size of the matrix: ");
-scanf("%d", &N);  
-printf("Enter the elements of the matrix two:\n");
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N; j++) {
-      printf("mat2[%d][%d]: ", i, j);
-      scanf("%lf", &mat1[i][j]); //Вводим значения с клавиатуры
-    }
-  }
-
-
-
-printf("Enter the operation sign: + / - / * \nYour answer: ");
-scanf("%s", &f);
-printf("\n");
-
-
-
-
-
-  //Освобождаем память 
-  for (int i = 0; i < N; i++) {
-    free(mat1[i]);  // Освобождаем строки
-    free(mat2[i]);  // Освобождаем строки
-  }
-  free(mat1);  // Освобождаем массив указателей на строки
-  free(mat2);  // Освобождаем массив указателей на строки
-
-  return 0;
+    free(mat2);
+    return 0;
 }
-
-
-
 
 
 
