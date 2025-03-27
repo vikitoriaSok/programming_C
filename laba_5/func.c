@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "func.h"
 
-double** calc(int n, double* mat1, double** mat2, char op) {
+double** calc(int n, double* mat1, double** mat2, char op) { //  char op: Символ операции (+, - или *).
     double** result = NULL;
     int i, j, k;
 
