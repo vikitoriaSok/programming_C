@@ -5,13 +5,17 @@
 4. Разместить эту функцию в отдельном модуле (отличном от того, где располагается функция main()). 
 5.Выдать на консоль значения по-лученного вектора. */
 
+/*Calc — это функция, которая выполняет над ненулевыми вещественными числами одну из арифметических операций
+и возвращает её результат*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "func.h"
 
 int main() {
+	
     int N;
-    double **mat1;  // Изменено на double**
+    double **mat1;  
     double **mat2;
     double **result = NULL;
     char f;
@@ -70,16 +74,16 @@ int main() {
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++) {
             printf("mat1[%d][%d]: ", i, j);
-            scanf("%lf", &mat1[i][j]); // Вводим значения с клавиатуры
+            scanf("%lf", &mat1[i][j]); 
         }
     }
 
-    // УДАЛЕН ПОВТОРНЫЙ ВВОД РАЗМЕРА МАТРИЦЫ
+
     printf("Enter the elements of the matrix two:\n");
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++) {
             printf("mat2[%d][%d]: ", i, j);
-            scanf("%lf", &mat2[i][j]);  // ИСПРАВЛЕНО: ввод в mat2
+            scanf("%lf", &mat2[i][j]); 
         }
     }
 
@@ -87,17 +91,17 @@ int main() {
     scanf(" %c", &f);
     printf("\n");
 
-    result = calc(N, (double*)mat1, mat2, f); // Вызов calc, пока без изменений
+    result = calc(N, (double*)mat1, mat2, f); 
 
     if (result != NULL) {
         printf("Result:\n");
         for (i = 0; i < N; i++){
             for (j = 0; j < N; j++){
-                printf("%.2lf ", result[i][j]);  // Используем %.2lf для double
+                printf("%.2lf ", result[i][j]); 
             }
             printf("\n");
         }
-           // Освобождение памяти для результирующей матрицы
+        // Освобождение памяти для результирующей матрицы
         for (i = 0; i < N; i++) {
             free(result[i]);
         }
@@ -116,8 +120,3 @@ int main() {
     free(mat2);
     return 0;
 }
-
-
-
-
-
