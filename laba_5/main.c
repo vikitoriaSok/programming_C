@@ -8,6 +8,8 @@
 /*Calc — это функция, которая выполняет над ненулевыми вещественными числами одну из арифметических операций
 и возвращает её результат*/
 
+/*malloc(): Функция, которая выделяет память из кучи*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "func.h"
@@ -26,6 +28,7 @@ int main() {
 
     // Выделяем память для mat1 (с проверкой ошибок)
     mat1 = (double**)malloc(N * sizeof(double *)); // Память под строки
+    //Проверка на ошибку.
     if (!mat1) {
         perror("MEMORY ERROR mat1");
         return 1;
@@ -44,6 +47,7 @@ int main() {
     }
 
     mat2 = (double **)malloc(N * sizeof(double *));
+    //Проверка на ошибку.
     if (!mat2) {
         perror("MEMORY ERROR mat2");
         // Освобождаем память, выделенную для mat1, если что-то пошло не так.
@@ -93,8 +97,8 @@ int main() {
 
     result = calc(N, (double*)mat1, mat2, f); 
 
-    if (result != NULL) {
-        printf("Result:\n");
+    if (result != NULL) { //вернула ли функция calc указатель на результирующую матрицу / NULL
+        printf("Result:\n"); //Если result не NULL - вывод
         for (i = 0; i < N; i++){
             for (j = 0; j < N; j++){
                 printf("%.2lf ", result[i][j]); 
