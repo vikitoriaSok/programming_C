@@ -4,7 +4,9 @@
 
 double** calc(int n, double* mat1, double** mat2, char op) { //  char op: Символ операции (+, - или *).
     double** result = NULL;
-    int i, j, k;
+    int i;
+    int j;
+    int k;
 
     // Выделение памяти для результирующей матрицы
     result = (double**)malloc(n * sizeof(double*));
@@ -48,6 +50,9 @@ double** calc(int n, double* mat1, double** mat2, char op) { //  char op: Сим
         }
     } else {
         printf("Некорректная операция.\n");
+
+
+        
         // Освобождаем ранее выделенную память
         for (i = 0; i < n; i++) {
             free(result[i]);
