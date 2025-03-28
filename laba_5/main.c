@@ -50,6 +50,7 @@ int main() {
         }
     }
 
+    // Выделяем память для mat2 (с проверкой ошибок)
     mat2 = (double **)malloc(N * sizeof(double *));
     //Проверка на ошибку.
     if (!mat2) {
