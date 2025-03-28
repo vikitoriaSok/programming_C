@@ -89,7 +89,7 @@ int main() {
 
 
     printf("Enter the elements of the matrix two:\n");
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < N; i++) { //перебирает строки матрицы
         for (j = 0; j < N; j++) {
             printf("mat2[%d][%d]: ", i, j);
             scanf("%lf", &mat2[i][j]); 
