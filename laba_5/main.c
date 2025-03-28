@@ -24,7 +24,8 @@ int main() {
     double **mat2;
     double **result = NULL;
     char f;
-    int i, j;
+    int i;
+    int j;
 
     printf("Enter the size of the matrix: ");
     scanf("%d", &N);
