@@ -28,6 +28,16 @@ int main(int argc, char *argv[]) {
 		}
 		fclose(fp);
 	}
+
+
+
+
+
+
+
+
+
+
 	
 	//копирование списка
 	char *filename1 = "text_name";
