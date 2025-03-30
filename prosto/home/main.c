@@ -16,6 +16,9 @@ int main(int argc, char *argv[]) {
   double x1;
   double x2;
   double D;
+  int y=0;
+  
+  do{
   
   printf("Enter a: ");
   scanf("%lf", &a);
@@ -45,6 +48,15 @@ int main(int argc, char *argv[]) {
   {
     printf("The discriminant is negative, there are no roots\n");
   }
+  
+  printf("1-prodolzit any other key - exit\n");
+  scanf("%d", &y);
+  if (y!=1)
+  {
+  	break;
+  }
+  }while (1==y);
+  
 
     return 0;
 }
