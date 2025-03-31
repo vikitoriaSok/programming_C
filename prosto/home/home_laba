@@ -1,4 +1,4 @@
-//ЛАБОРПТОРНАЯ РАБОТА 1
+//ЛАБОРПТОРНАЯ РАБОТА №1
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -62,3 +62,9 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+
+
+
+
+//ЛАБОРАТОРНАЯ РАБОТА №2
