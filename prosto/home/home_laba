@@ -116,7 +116,7 @@ int main() {
 		sum2 += matrix[i][(n-1)-i]; //сумма индексов строки и стобца = n-1
 	}
 	printf("THE SUM OF THE MAIN DIAGONAL: %.2lf\n", sum1);
-	printf("THE SUM OF THE SIDE DIAGONAKE: %.2lf\n", sum2);
+	printf("THE SUM OF THE SIDE DIAGONAL: %.2lf\n", sum2);
 		
 	
   return 0;
