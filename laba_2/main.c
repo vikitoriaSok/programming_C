@@ -85,18 +85,23 @@ int main() {
 
 
 //ЗАДАЧА 
-#include <math.h>
-
 int main() {
 
-  double sum1 = 0, sum2 = 0;
-  int i, j, n, N, k;
+  double sum1 = 0;
+  double sum2 = 0;
+  int i;
+  int j;
+  int n;
+  int N;
+  int k;
 
 printf("Enter the size of the matrix: ");   
 scanf("%d", &n);
+
 double a[n][n]; 
   N = pow(n, 2); 
   printf("Enter %d numbers for the array int:\n", N); 
+  
   for (i = 0; i < n; i++)                     
     for (j = 0; j < n; j++)                    
       scanf("%lf", &a[i][j]);                 
@@ -131,7 +136,7 @@ double a[n][n];
     }
   }
 
-  printf("\n:\n");
+  printf("\n\n");
   for (i = 0; i < n; i++) { 
     for (j = 0; j < n; j++) { 
       printf("%d ", c[i][j]); 
@@ -141,4 +146,3 @@ double a[n][n];
 
   return 0;
 }
-
