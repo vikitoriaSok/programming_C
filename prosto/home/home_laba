@@ -21,7 +21,8 @@ int main(int argc, char *argv[]) {
   int y=0;
   
   do{
-  
+
+
   printf("Enter a: ");
   scanf("%lf", &a);
   
@@ -53,6 +54,8 @@ int main(int argc, char *argv[]) {
   
   printf("1-prodolzit any other key - exit\n");
   scanf("%d", &y);
+
+
   if (y!=1)
   {
   	break;
@@ -118,6 +121,7 @@ int main() {
 	}
 	printf("THE SUM OF THE MAIN DIAGONAL: %.2lf\n", sum1);
 	printf("THE SUM OF THE SIDE DIAGONAL: %.2lf\n\n", sum2);
+
 		
 	//МАТРИЦА 2	
 	printf("ENTER THE SIZE OF THE MATRIX: ");
