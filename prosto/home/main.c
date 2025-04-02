@@ -67,7 +67,6 @@ int main(int argc, char *argv[]) {
 
 
 
-//ЛАБОРАТОРНАЯ РАБОТА 2
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -87,13 +86,33 @@ int main() {
 	
 	int n; //размер матрицы
 	int N; //n*n
+	int i;
+	int j;
+	double sum1=0;
+	double sum2=0;
 	
 	printf("ENTER THE SIZE OH THE MATRIX: ");
 	scanf("%d", &n);
 	
 	double matrix[n][n];
 	N=pow(n,2);
-	printf("ENTER %d NUMBERS FOR THE ARRAY INT:\n", N0);
+	printf("ENTER %d NUMBERS FOR THE ARRAY INT:\n", N);
+	
+	for (i=0;i<n;i++){
+		for (j=0;j<n;j++){
+			scanf("%lf", &matrix[i][j]);
+			printf("matrix[%d][%d] = %.2lf\n",i,j,matrix[i][j]);
+			
+		}
+	}
+	
+	for (i=0;i<n;i++){
+			sum1 += matrix[i][i];
+			sum2 += matrix[i][(n-1)-i];
+	}
+	printf("THE SUM OF THE MAIN DIAGONAL: %.2lf\n", sum1);
+	printf("THE SUM OF THE SIDE DIAGONAL: %.2lf\n\n", sum2);
+	
 	
   return 0;
 }
