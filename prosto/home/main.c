@@ -1,3 +1,4 @@
+//ЛАБОРАТОРНАЯ РАБОТА 1
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -59,4 +60,40 @@ int main(int argc, char *argv[]) {
   
 
     return 0;
+}
+
+
+
+
+
+
+//ЛАБОРАТОРНАЯ РАБОТА 2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+/*
+Объявить массив данных типа double размером 3 на 3.
+Ввести с консоли его значения, 
+вывести на консоль сумму его элементов, расположенных на главной диагонали
+сумму элементов, расположенных на  побочной диагонали.
+Объявить массив данных типа int размером 2 на 2. 
+Ввести с консоли его значе-ния
+вывести на консоль квадрат данной матрицы.
+*/
+
+int main() {
+	
+	int n; //размер матрицы
+	int N; //n*n
+	
+	printf("ENTER THE SIZE OH THE MATRIX: ");
+	scanf("%d", &n);
+	
+	double matrix[n][n];
+	N=pow(n,2);
+	printf("ENTER %d NUMBERS FOR THE ARRAY INT:\n", N0);
+	
+  return 0;
 }
