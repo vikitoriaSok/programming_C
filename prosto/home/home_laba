@@ -171,20 +171,37 @@ int main() {
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 
 /*
 Ввести с консоли строку символов произвольной длины (до 80 символов). 
 Поменять в ней все маленькие символы 'a' и 'b' на заглавные и вывести на консоль полу-ченную строку.
 */
 
-int main() {
+int main(int argc, char *argv[]) {
 	
+	char s[80];
+	int len;
+	int i;
+	
+	printf("vvedite stroky do 80ti simvolov:\n");
+	scanf("%s", &s);
+	
+	len=strlen(s);
+	
+	for (i=0;i<len;i++)
+	{
+		if (s[i]=='a'){
+			s[i]='A';
+		}
+		
+		if (s[i]=='b'){
+			s[i]='B';
+		}
+		if (s[i]=='!'){
+			s[i]='&';
+		}
+	}
+	printf("%s", s);
 
-	
-  return 0;
+ return 0; 
 }
-
-
-
-//ЛАБОРАТОРНАЯ РАБОТА 3
