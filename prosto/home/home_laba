@@ -208,3 +208,9 @@ int main(int argc, char *argv[]) {
 	printf("%s", s);
 
  return 0;
+
+
+
+
+//ЛАБОРАТОРНАЯ РАБОТА 4
+MAIN.C
