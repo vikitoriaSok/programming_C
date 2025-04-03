@@ -1,3 +1,4 @@
+//ПИШУ ЛАБОРАТОРНЫЕ РАБОТЫ ЗАНОВО
 //ЛАБОРАТОРНАЯ РАБОТА №1
 
 #include <stdio.h>
@@ -167,7 +168,7 @@ int main() {
 
 
 
-//ЛАБОРАТОРНАЯ РАБОТА 3
+//ЛАБОРАТОРНАЯ РАБОТА №3
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -198,10 +199,12 @@ int main(int argc, char *argv[]) {
 			s[i]='B';
 		}
 		if (s[i]=='!'){
-			s[i]='&';
+			s[i]='.';
+		}
+		if (s[i]=='i'){
+			s[i]='I';
 		}
 	}
 	printf("%s", s);
 
- return 0; 
-}
+ return 0;
