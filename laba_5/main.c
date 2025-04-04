@@ -12,27 +12,24 @@
 
 /*NULL в языке программирования Си — макрос, значением которого является константа нулевого указателя*/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "func.h"
 
 int main() {
-	
-    int N;
+    int N; //размер матрицы
     double **mat1;  
     double **mat2;
     double **result = NULL;
     char f;
     int i;
-    int j;
+	int j;
 
     printf("Enter the size of the matrix: ");
     scanf("%d", &N);
 
     // Выделяем память для mat1 (с проверкой ошибок)
     mat1 = (double**)malloc(N * sizeof(double *)); // Память под строки
-    //Проверка на ошибку.
     if (!mat1) {
         perror("MEMORY ERROR mat1");
         return 1;
@@ -50,9 +47,7 @@ int main() {
         }
     }
 
-    // Выделяем память для mat2 (с проверкой ошибок)
     mat2 = (double **)malloc(N * sizeof(double *));
-    //Проверка на ошибку.
     if (!mat2) {
         perror("MEMORY ERROR mat2");
         // Освобождаем память, выделенную для mat1, если что-то пошло не так.
@@ -78,6 +73,10 @@ int main() {
             return 1;
         }
     }
+    
+    
+    
+    
 
     printf("Enter the elements of the matrix one:\n");
     for (i = 0; i < N; i++) {
@@ -87,12 +86,12 @@ int main() {
         }
     }
 
-
+ 
     printf("Enter the elements of the matrix two:\n");
-    for (i = 0; i < N; i++) { //перебирает строки матрицы. Цикл будет выполняться, пока i меньше, чем N 
-        for (j = 0; j < N; j++) { //Это внутренний цикл, который перебирает столбцы матрицы. Цикл будет выполняться, пока j меньше, чем N
-            printf("mat2[%d][%d]: ", i, j); //выводит на экран подсказку, предлагая пользователю ввести элемент матрицы с индексами i и j
-            scanf("%lf", &mat2[i][j]); 
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            printf("mat2[%d][%d]: ", i, j);
+            scanf("%lf", &mat2[i][j]);  
         }
     }
 
@@ -102,15 +101,15 @@ int main() {
 
     result = calc(N, (double*)mat1, mat2, f); 
 
-    if (result != NULL) { //вернула ли функция calc указатель на результирующую матрицу / NULL
-        printf("Result:\n"); //Если result не NULL - вывод
+    if (result != NULL) {
+        printf("Result:\n");
         for (i = 0; i < N; i++){
             for (j = 0; j < N; j++){
                 printf("%.2lf ", result[i][j]); 
             }
             printf("\n");
         }
-        // Освобождение памяти для результирующей матрицы
+           // Освобождение памяти для результирующей матрицы
         for (i = 0; i < N; i++) {
             free(result[i]);
         }
