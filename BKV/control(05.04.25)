@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+ long long int gcd(long long int a, long long int b) {
+  while (b) {
+    a %= b;
+    long long int temp = a;
+    a = b;
+    b = temp;
+  }
+  return a;
+}
+
+int main() {
+  long long int N, M;
+  scanf("%lld %lld", &N, &M);
+
+
+  long long int numerator = N * M;
+  long long int denominator = M - N;
+
+  if (numerator % denominator == 0) {
+    printf("%lld/1\n", numerator / denominator);
+  } else {
+
+    long long int commonDivisor = gcd(numerator, denominator);
+    numerator /= commonDivisor;
+    denominator /= commonDivisor;
+
+    printf("%lld/%lld\n", numerator, denominator);
+  }
+
+  return 0;
+}
