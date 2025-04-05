@@ -1,0 +1,151 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_SIZE 1000
+
+int M, N;
+char map[MAX_SIZE][MAX_SIZE];
+int visited[MAX_SIZE][MAX_SIZE];
+
+typedef struct {
+    int x, y;
+} Point;
+
+Point queue[MAX_SIZE * MAX_SIZE];
+int front = 0, rear = 0;
+
+int canMove(int x, int y, int dir) {
+    if (x < 0 || y < 0 || x >= M || y >= N) return 0;
+
+    int hex;
+    if (map[x][y] >= '0' && map[x][y] <= '9') {
+        hex = map[x][y] - '0';
+    } else if (map[x][y] >= 'A' && map[x][y] <= 'F') {
+        hex = map[x][y] - 'A' + 10;
+    } else {
+        printf("Invalid character in map at (%d, %d): %cn", x, y, map[x][y]);
+        return 0;
+    }
+
+    if (dir == 0) return !(hex & 1); 
+    if (dir == 1) return !(hex & 2); 
+    if (dir == 2) return !(hex & 4); 
+    if (dir == 3) return !(hex & 8);
+
+    return 0;
+}
+
+void bfs() {
+  
+    front = 0;
+    rear = 0;
+    memset(visited, 0, sizeof(visited));
+
+    queue[rear++] = (Point){0, 0};
+    visited[0][0] = 1;
+
+    int dx[] = {0, -1, 0, 1}; 
+    int dy[] = {-1, 0, 1, 0};
+
+    while (front < rear) {
+        Point p = queue[front++];
+        int x = p.x, y = p.y;
+
+        if (x == M - 1 && y == N - 1) return;
+
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i], ny = y + dy[i];
+
+            if (nx >= 0 && ny >= 0 && nx < M && ny < N && canMove(nx, ny, i) && !visited[nx][ny]) {
+                visited[nx][ny] = visited[x][y] + 1;
+                queue[rear++] = (Point){nx, ny};
+            }
+        }
+    }
+}
+
+void markPath() {
+    int x = M - 1, y = N - 1;
+    if (!visited[x][y]) {
+        printf("no way\n");
+        return;
+    }
+
+   
+    char originalMap[MAX_SIZE][MAX_SIZE];
+    for (int i = 0; i < M; i++) {
+        strcpy(originalMap[i], map[i]);
+    }
+
+    while (x != 0 || y != 0) {
+        map[x][y] = '*';
+        int minStep = visited[x][y];
+        int bestX = x, bestY = y;
+
+        int dx[] = {0, -1, 0, 1};
+        int dy[] = {-1, 0, 1, 0};
+
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i], ny = y + dy[i];
+            if (nx >= 0 && ny >= 0 && nx < M && ny < N && visited[nx][ny] > 0 && visited[nx][ny] < minStep) {
+                minStep = visited[nx][ny];
+                bestX = nx;
+                bestY = ny;
+            }
+        }
+        x = bestX;
+        y = bestY;
+    }
+    map[0][0] = '*';
+ 
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+             if (map[i][j] != '*') {
+                 map[i][j] = originalMap[i][j];
+            }
+        }
+    }
+}
+
+void readFile(char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (!file) {
+        printf("Error reading filen");
+        exit(1);
+    }
+
+    fscanf(file, "%d %d", &M, &N);
+    for (int i = 0; i < N; i++) { 
+        fscanf(file, "%s", map[i]);
+    }
+    fclose(file);
+}
+
+void writeFile(char *filename) {
+    FILE *file = fopen(filename, "w");
+    if (!file) {
+        printf("Error writing to filen");
+        exit(1);
+    }
+
+    for (int i = 0; i < N; i++) {  
+        fprintf(file, "%sn", map[i]);
+    }
+    fclose(file);
+}
+
+int main() {
+    readFile("3x4");
+    bfs();
+    markPath();
+    writeFile("output.txt");
+
+    if (visited[M - 1][N - 1] > 0) {
+            printf("The shortest path: %d steps\n", visited[M - 1][N - 1] - 1);
+    } else {
+         printf("No path found\n");
+    }
+
+    return 0;
+}
