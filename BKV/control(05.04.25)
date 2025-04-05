@@ -1,6 +1,6 @@
+//ЗАДАНИЕ 1
+
 #include <stdio.h>
-
-
  long long int gcd(long long int a, long long int b) {
   while (b) {
     a %= b;
