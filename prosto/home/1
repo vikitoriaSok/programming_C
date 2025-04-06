@@ -413,6 +413,9 @@ int main() {
   
   perimeter = side1 + side2 + hypotenuse;
   printf("perimeter = %d", perimeter);
+    
+  return 0;
+}
 
 
 
@@ -441,8 +444,29 @@ int main(int argc, char *argv[]) {
 }
 
   
-  
 
-  
-  return 0;
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int p;
+	
+	printf("ENTER A: ");
+	scanf("%d", &a);
+	
+	p=4*a;
+	printf("PERIMETER = %d", p);
+
+ return 0;
+ 
 }
