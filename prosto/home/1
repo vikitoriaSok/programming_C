@@ -458,14 +458,22 @@ int main(int argc, char *argv[]) {
 
 int main(int argc, char *argv[]) {
 	
-	int a;
-	int p;
+	int A;
+	int B;
+	int C;
+	int AB;
+	int BC;
 	
 	printf("ENTER A: ");
-	scanf("%d", &a);
+	scanf("%d", &A);
+	printf("ENTER B: ");
+	scanf("%d", &B);
+	printf("ENTER C: ");
+	scanf("%d", &C);
 	
-	p=4*a;
-	printf("PERIMETER = %d", p);
+	AB = A+B;
+	printf("A+B = %d", AB);
+	
 
  return 0;
  
