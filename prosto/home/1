@@ -487,18 +487,26 @@ int main(int argc, char *argv[]) {
 
 
 
+//ЗАДАЧА
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 /*
-Найти значение функции y = 3x6 ? 6x2 ? 7 при данном значении x.
+Найти значение функции y = 3x^6- 6x^2 - 7 при данном значении x.
 */
 
 int main(int argc, char *argv[]) {
 	
+	int x;
+	int y;
+	
+	printf("ENTER X: ");
+	scanf("%d", &x);
+	
+	y=(3*pow(x,6)-6*pow(x,2)-7);
+	printf("Y = %d", y);
 	
  return 0;
  
 }
-
