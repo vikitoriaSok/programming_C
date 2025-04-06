@@ -535,12 +535,16 @@ int main(int argc, char *argv[]) {
 	res = x + y;
 	printf("VARIABLE: %d + %d = %d\n", x, y,res);
 	res = x - y;
-	printf("VARIABLE: %d + %d = %d\n", x, y,res);
+	printf("VARIABLE: %d - %d = %d\n", x, y,res);
 	res = x / y;
-	printf("VARIABLE: %d + %d = %d\n", x, y,res);
+	printf("VARIABLE: %d / %d = %d\n", x, y,res);
 	res = y / x;
-	printf("VARIABLE: %d + %d = %d\n", x, y,res);
+	printf("VARIABLE: %d / %d = %d\n", x, y,res);
+	res = (x*x*x * y/x);
+	printf("VARIABLE: %d * %d = %d\n", x, y,res);
+	
 	
  return 0;
  
 }
+
