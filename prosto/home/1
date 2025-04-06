@@ -524,6 +524,23 @@ int main(int argc, char *argv[]) {
 	int y;
 	int res;
 	
+	printf("ENTER X: ");
+	scanf("%d",&x);
+	printf("ENTER Y: ");
+	scanf("%d", &y);
+	
+	
+	res = x + y;
+	printf("x + y = %d\n", res);
+	res = x - y;
+	printf ("x - y = %d\n", res);
+	res = x / y;
+	printf("x / y = %d\n", res);
+	res = y / x;
+	res = x * y;
+	x *= 5;
+	
+	
  return 0;
  
 }
