@@ -413,6 +413,33 @@ int main() {
   
   perimeter = side1 + side2 + hypotenuse;
   printf("perimeter = %d", perimeter);
+
+
+
+
+  //ЗАДАЧА
+  #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Дана сторона квадрата a. Найти его периметр P = 4·a.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int p;
+	
+	printf("ENTER A: ");
+	scanf("%d", &a);
+	
+	p=4*a;
+	printf("PERIMETER = %d", p);
+
+ return 0; 
+}
+
   
   
 
