@@ -510,3 +510,20 @@ int main(int argc, char *argv[]) {
  return 0;
  
 }
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	int x;
+	int y;
+	int res;
+	
+ return 0;
+ 
+}
