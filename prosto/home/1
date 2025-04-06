@@ -524,22 +524,22 @@ int main(int argc, char *argv[]) {
 	int y;
 	int res;
 	
-	printf("ENTER X: ");
-	scanf("%d",&x);
-	printf("ENTER Y: ");
-	scanf("%d", &y);
-	
+	//printf("ENTER X: ");
+	//scanf("%d",&x);
+	//printf("ENTER Y: ");
+	//scanf("%d", &y);
+	x = 10;
+	x += 10;
+	y = 20;
 	
 	res = x + y;
-	printf("x + y = %d\n", res);
+	printf("VARIABLE: %d + %d = %d\n", x, y,res);
 	res = x - y;
-	printf ("x - y = %d\n", res);
+	printf("VARIABLE: %d + %d = %d\n", x, y,res);
 	res = x / y;
-	printf("x / y = %d\n", res);
+	printf("VARIABLE: %d + %d = %d\n", x, y,res);
 	res = y / x;
-	res = x * y;
-	x *= 5;
-	
+	printf("VARIABLE: %d + %d = %d\n", x, y,res);
 	
  return 0;
  
