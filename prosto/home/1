@@ -484,8 +484,21 @@ int main(int argc, char *argv[]) {
  return 0;
  
 }
-	
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Найти значение функции y = 3x6 ? 6x2 ? 7 при данном значении x.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	
  return 0;
  
 }
+
