@@ -559,7 +559,17 @@ int main(int argc, char *argv[]) {
 
 int main(int argc, char *argv[]) {
 	
-
+	int M;
+	int T;
+	
+	printf("Enter the weight in kg: ");
+	scanf("%d", &M);
+	
+	T = M / 1000;
+	
+	printf("Number of tons per %d kg = %d", M, T);
+	
+	
  return 0;
  
 }
