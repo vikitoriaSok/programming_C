@@ -639,3 +639,40 @@ int main(int argc, char *argv[]) {
  return 0;
  
 }
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/* Дано целое число.
+Если оно является положительным, то вычесть из него 8;
+если отрицательным, то прибавить к нему 6;
+если нулевым, то заменить его на 10.
+Вывести полученное число.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num;
+	
+	printf("Enter number: ");
+	scanf("%d", &num);
+	
+	if(num>0){
+		num = num - 8;
+		printf("Number = %d", num);
+	}
+	else if (num<0){
+		num = num + 6;
+		printf("Number = %d", num);
+	}
+	else
+	{
+		num = 10;
+		printf("Number = %d", num);
+	}
+	
+ return 0;
+ 
+}
