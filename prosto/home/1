@@ -603,3 +603,39 @@ int main(int argc, char *argv[]) {
  
 }
 
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три целых числа: A, B, C. 
+Проверить истинность высказывания: «Число B находится между числами A и C».*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	int B;
+	int C;
+	
+	printf("Enter number A: ");
+	scanf("%d", &A);
+	
+	printf("Enter number B: ");
+	scanf("%d", &B);
+	
+	printf("Enter number C: ");
+	scanf("%d", &C);
+	
+	if ((A<B && B<C) || (C < B && B < A)) {
+		printf("TRUE");
+	}
+	else
+	{
+		printf("FALSE");
+	}
+	
+ return 0;
+ 
+}
