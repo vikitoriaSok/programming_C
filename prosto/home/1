@@ -548,3 +548,18 @@ int main(int argc, char *argv[]) {
  
 }
 
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Дана масса M в килограммах.
+Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг).*/
+
+
+int main(int argc, char *argv[]) {
+	
+
+ return 0;
+ 
+}
