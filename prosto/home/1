@@ -729,3 +729,48 @@ int main(int argc, char *argv[]) {
  return 0;
  
 }
+
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три числа.
+Найти сумму двух наибольших из них.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num1;
+	int num2;
+	int num3;
+	int sum;
+	int summa2;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	printf("Enter number three: ");
+	scanf("%d", &num3);
+	
+	sum = num1 + num2 + num3;
+	printf("SUMMA = %d\n", sum);
+	
+	int min = num1;
+	if (num2<min){
+		min = num2;
+	}
+	if (num3<min){
+		min = num3;
+	}
+	printf("MIN = %d\n", min);
+	
+	summa2 = sum - min;
+	printf("Summa_2x = %d", summa2);
+	
+ return 0;
+ 
+}
+
