@@ -845,3 +845,27 @@ int main(){
 	return 0;
 }
 
+
+
+//ЗАДАЧА
+/*Дано вещественное число — цена 1 кг конфет.
+Вывести стоимость 1.2, 1.4, …, 2 кг конфет.*/
+
+#include <stdio.h>
+
+int main() {
+  
+  float price_kg;
+  float i;
+  
+  printf("Enter the price per kg: ");
+  scanf("%f", &price_kg);
+  printf("Coast:\n");
+  
+  for (i=1.2;i<=2;i+=0.2){
+  	printf("%.1f kg: %.1f rub\n",i,i*price_kg);
+  }
+
+  return 0;
+}
+
