@@ -269,3 +269,47 @@ bool valid (double s1, double s2, double s3)
 {
 	return s1+s2>s3 && s1+s3>s2 && s2+s3>s1;
 }
+
+
+
+//ЗАДАНИЕ ПО АНАЛОГИИ ЛАБЫ 1
+/*
+1.  Объявите три вещественные переменные x, y и z и присвойте им значения.
+2.  Вычислите среднее геометрическое этих трех чисел (x * y * z)^(1/3) 
+Убедитесь, что произведение x * y * z неотрицательное, иначе корни не будут вещественными.
+3.  Выведите на консоль значение среднего геометрического с двумя знаками после запятой.
+*/
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+  float X;
+  float Y;
+  float Z;
+  double geom;
+  double comp;
+
+  printf("Enter X: ");
+  scanf("%f", &X); 
+  printf("Enter Y: ");
+  scanf("%f", &Y); // 
+  printf("Enter Z: ");
+  scanf("%f", &Z); 
+
+  comp = X * Y * Z;
+
+
+  if (comp < 0) {
+    printf("ERROR\n");
+    return 1; 
+  }
+
+  geom = pow(comp, 1.0/3.0); 
+  printf("Geometric mean X,Y,Z = %.2lf\n", geom); 
+
+  return 0;
+}
+
