@@ -774,3 +774,28 @@ int main(int argc, char *argv[]) {
  
 }
 
+
+//ЗАДАЧА 
+/*Даны целые числа K и N (N > 0).
+Вывести N раз число K.*/
+
+#include <stdio.h>
+
+int main() {
+  int K;//число
+  int N;//количество раз
+  int i;
+
+  printf("Enter Number K: ");
+  scanf("%d", &K);
+  printf("Enter the quantity N: ");
+  scanf("%d", &N);
+
+  for (i = 0; i < N; i++) {
+    printf("%d ", K);
+  }
+
+  return 0;
+}
+
+
