@@ -901,3 +901,25 @@ int main() {
 
   return 0;
 }
+
+
+//ЗАДАЧА
+/*Вывод таблицы умножения:
+Напишите программу, которая выводит таблицу умножения для заданного числа N (например, от 1 до 10).*/
+
+#include <stdio.h>
+
+int main() {
+
+	int N;
+	int i;
+	
+	printf("Enter number: ");
+	scanf("%d", &N);
+	
+	for (i=1;i<N;i++){
+		printf("%d * %d = %d\n", N,i,N*i);
+	}
+	
+  return 0;
+}
