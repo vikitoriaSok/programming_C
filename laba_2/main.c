@@ -242,3 +242,53 @@ int main() {
 
   return 0;
 }
+
+
+
+
+//ЗАДАЧА 
+/*
+1. Объявите двумерный массив matrix типа int размером 3x3.
+2. Введите с консоли значения для каждого элемента массива matrix.
+3. Вычислите сумму всех элементов массива matrix.
+4. Выведите на консоль вычисленную сумму.
+5. Вычислите произведение всех элементов массива matrix.
+6. Выведите на консоль вычисленное произведение.
+*/
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+	int matrix[3][3];
+	int i;
+	int j;
+	int sum=0;
+	int prod=1;
+	
+	printf("Enter the array elements 3x3:\n");
+	for (i=0;i<3;i++){
+		for(j=0;j<3;j++)
+		{
+			printf("matrix[%d][%d]:", i, j);
+			scanf("%d", &matrix[i][j]);
+		}
+	}
+	//вычисление суммы и произведения
+	for (i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			sum += matrix[i][j];
+			prod *= matrix[i][j];
+			
+		}
+	}
+	printf("SUMMA = %d\n",sum);
+	printf("PRODUCT = %d\n", prod);
+
+  return 0;
+}
+
+
+
