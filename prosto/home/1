@@ -923,3 +923,37 @@ int main() {
 	
   return 0;
 }
+
+
+//ЗАДАЧА
+/*
+Даны два целых числа A и B (A < B).
+Найти произведение всех целых чисел от A до B включительно.
+*/
+
+#include <stdio.h>
+
+int main() {
+
+	int A;
+	int B;
+	int i;
+	int composition;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	printf("Enter B: ");
+	scanf("%d", &B);
+	
+	if (A>=B){
+		printf("ERROR");
+		return 1;
+	}
+	for (i=A;i<=B;i++){
+		composition *= i;//product = product * i;
+	}
+	printf("The product of all integers from %d to %d inclusive = %d", A,B,composition);
+	
+  return 0;
+}
+
