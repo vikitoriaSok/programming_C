@@ -682,27 +682,41 @@ int main(int argc, char *argv[]) {
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/*Даны три числа. Найти наименьшее из них.*/
+/*Даны три числа. 
+Вывести вначале наименьшее
+а затем наибольшее из данных чисел..*/
 
 
 int main(int argc, char *argv[]) {
 	
-	int num1;
+	int num1;;
 	int num2;
 	int num3;
 	
-	printf("Enter three numbers: ");
-	scanf("%d %d %d", &num1,&num2,&num3);
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	printf("Enter number three: ");
+	scanf("%d", &num3);
 	
 	int min = num1;
-	
 	if (num2<min){
 		min = num2;
 	}
 	if (num3<min){
 		min = num3;
-	}	
-	printf("MIN = %d", min);
+	}
+	printf("MIN = %d\n",min);
+	
+	int max = num1;
+	if (num2>max){
+		max = num2;
+	}
+	if (num3>max){
+		max = num3;
+	}
+	printf("MAX = %d", max);
 	
  return 0;
  
