@@ -676,3 +676,34 @@ int main(int argc, char *argv[]) {
  return 0;
  
 }
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три числа. Найти наименьшее из них.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num1;
+	int num2;
+	int num3;
+	
+	printf("Enter three numbers: ");
+	scanf("%d %d %d", &num1,&num2,&num3);
+	
+	int min = num1;
+	
+	if (num2<min){
+		min = num2;
+	}
+	if (num3<min){
+		min = num3;
+	}	
+	printf("MIN = %d", min);
+	
+ return 0;
+ 
+}
