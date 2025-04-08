@@ -869,3 +869,35 @@ int main() {
   return 0;
 }
 
+
+
+
+//ЗАДАЧА
+/*Даны два целых числа A и B (A < B).
+Найти сумму всех целых чисел от A до B включительно.*/
+
+#include <stdio.h>
+
+int main() {
+
+	int A;
+	int B;
+	int i;
+	int sum=0;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	printf("Enter B: ");
+	scanf("%d", &B);
+	
+	if (A>=B){
+		printf("ERROR");	
+	}
+	
+	for (i=A;i<=B;i++){
+		sum+=i; // sum = sum + i;
+	}
+	printf("The sum of integers from %d before %d = %d", A,B,sum);
+
+  return 0;
+}
