@@ -11,11 +11,11 @@ unsigned char nat [10000000];
 #define DEBUG  
 #undef DEBUG
 
-
-
 int main(int argc, char *argv[]) {
-  int i, k;
-  long N, Prime;
+  int i;
+  int k;
+  long N;
+  long Prime;
 
   printf("enter N:\n"); 
   scanf("%ld", &N);
