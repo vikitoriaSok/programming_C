@@ -11,6 +11,7 @@
   return a;
 }
 
+
 int main() {
   long long int N, M;
   scanf("%lld %lld", &N, &M);
