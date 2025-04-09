@@ -967,10 +967,7 @@ int main() {
 
 1. Объявить массив данных типа int размером 2 на 2. 
 2. Ввести с консоли его значе-ния, вывести на консоль квадрат данной матрицы.
-
 */
-
-
 #include <stdio.h>
 #include <math.h>
 
@@ -980,6 +977,8 @@ int main() {
 	int i;//строки
 	int j;//столбцы
 	int N;
+	int sum=0;
+	int prod=1;
 	
 	printf("Enter the side of the matrix: ");
 	scanf("%d",&n);
@@ -996,10 +995,15 @@ int main() {
 			scanf("%lf", &massiv[i][j]);
 		}
 	}
-	
+	for (i=0;i<n;i++){
+		for (j=0;j<n;j++){
+			sum += massiv[i][j];
+			prod *= massiv[i][j];
+		}
+	}
+	printf("SUMMA = %d\n", sum);
+	printf("PROD = %d", sum);
 	
 
   return 0;
 }
-
-
