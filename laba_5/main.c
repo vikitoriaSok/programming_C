@@ -30,6 +30,8 @@ int main() {
     printf("Enter the size of the matrix: ");
     scanf("%d", &N);
 
+
+    
     // Выделяем память для mat1 (с проверкой ошибок)
     mat1 = (double**)malloc(N * sizeof(double *)); // Память под строки
     if (!mat1) {
