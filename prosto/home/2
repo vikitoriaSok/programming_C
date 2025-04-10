@@ -1,1 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+	int arr[] = {5,7,2,56,34,89};
+	arr[0] = 56;
+	printf("arr[0] = %d", arr[0]);
+	
+
+  return 0;
+}
+
+
 
