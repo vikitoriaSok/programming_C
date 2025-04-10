@@ -1,3 +1,5 @@
+//МАССИВЫ
+
 #include <stdio.h>
 #include <math.h>
 
@@ -5,11 +7,16 @@ int main() {
 
 	int arr[] = {5,7,2,56,34,89};
 	arr[0] = 56;
-	printf("arr[0] = %d", arr[0]);
+	printf("arr[0] = %d\n", arr[0]);
+	
+	float num[3];
+	num[0] = 5.4f;
+	num[1] = 4.23f;
+	num[2] = 67.34f;
+	printf("num[1] = %.2f\n", num[1]);
 	
 
   return 0;
 }
-
 
 
