@@ -37,21 +37,34 @@ int main(int argc, char *argv[]) {
 		                                    //Функция fgets читает строку из файла, на который указывает f1, и записывает ее в buffer. 
 		{
 			printf("%s", buffer);
-			fputs(buffer, f2);
+			int t;
+			int l = strlen(buffer);
+			t = ((int)buffer[l-5]-48)*1000 + ((int)buffer[l-4]-48)*100 + ((int)buffer[l-3]-48)*10 + ((int)buffer[l-2]-48);
+			printf("%d", t);
+			printf("\n");
+			printf("%zu\n", strlen(buffer));
+
+			
+			/*if(t>1980){
+				fputs(buffer, f2);
+			}*/
+			
+			if (buffer[0] == 'S'){
+				fputs(buffer, f2);
+			}
+			
+			
+			
 		}
 		fclose(f1);
 		fclose(f2);	
 		
 	}
 	
-//условие
-	
 	
 	
 	return 0;
 }
-
-
 
 
 
