@@ -22,12 +22,12 @@
 
 int main(int argc, char *argv[]) {
 	
-    struct humen h1[4];
-    struct humen h2[4];
-
 	int N=4;//элемент массива из 4х
 	int i;//переменная для цикла
 	
+    struct humen h1[N];
+    struct humen h2[N];
+
 
 	
 	for (i=0; i<N;i++)
@@ -46,9 +46,9 @@ int main(int argc, char *argv[]) {
 	
 	for (i=0; i<N;i++)
 	{
-		printf("name: %s. ", h1[i].name);
-		printf("middle name: %s. ",  h1[i].sname);
-		printf("birth: %d. ", h1[i].year);
+		printf("Name: %s. ", h1[i].name);
+		printf("Middle name: %s. ",  h1[i].sname);
+		printf("Birth: %d. ", h1[i].year);
 		printf("\n");
 		
 		h2[i] = h1[i];	
@@ -69,14 +69,15 @@ int main(int argc, char *argv[]) {
 	printf("RESULT:\n");
 	for (i=0; i<N;i++)
 	{
-		printf("name: %s. ", h2[i].name);
-		printf("middle name: %s. ",  h2[i].sname);
-		printf("birth: %d. ", h2[i].year);
+		printf("Name: %s. ", h2[i].name);
+		printf("Middle name: %s. ",  h2[i].sname);
+		printf("Birth: %d. ", h2[i].year);
 		printf("\n");	
 	}	
 	
 	return 0;
 }
+
 
 
 
