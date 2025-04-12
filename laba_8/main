@@ -9,6 +9,22 @@
 5. А также реализовать возможность задавать несколько полей для упорядочивания. 
 */
 
+struct humen {
+	char name [100];
+	char sname[100];
+	int year;
+	char gender;
+	float height;
+};
+
 int main(int argc, char *argv[]) {
+	
+	char * filename1 = "sos.txt";
+	FILE*f1=fopen(filename1,"r");
+	if (f1 == NULL) {
+        perror("Ошибка открытия файла");
+        return 0; 
+    }
+
 	return 0;
 }
