@@ -13,34 +13,39 @@
 4. Построить на их основе другой, упорядочив элементы по годам рождения. 
 5. Вывести результат. */
 
-
-struct humen
-{
-	char name;
-	char sname;
-	int year;	
-};
+	struct humen
+	{
+		char name[30];
+		char sname[30];
+		int year;	
+	} ;
 
 int main(int argc, char *argv[]) {
 	
+    struct humen* h1;
+    struct humen* h2;
+
 	int N=4;//элемент массива из 4х
 	int i;//переменная для цикла
 	
-	humen h1[4];//name sname year
-	humen h2[4];
+
 	
 	for (i=0; i<N;i++)
 	{
-		fghjkl
+		printf("Enter a name: ");
+		scanf("%s",h1[i].name);
+		
+		printf("Enter your middle name: ");
+		scanf("%s", h1[i].sname);
+		
+		printf("Enter year of birth");
+		scanf("%d", h1[i].year);
 	}
-	
-	
-	
-	scanf("%s",h1[0].name);
-	
 	
 	
 	
 	return 0;
 }
+
+
 
