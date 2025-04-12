@@ -78,3 +78,79 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
+
+
+
+
+
+
+
+
+
+/7.2
+	#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+/*
+1. Объявить тип-структуру humen, включающую имя человека, фамилию и год рождения.
+2. Объявить два массива из четырёх элементов типа humen.
+
+3. Ввести с консоли или из файла элементы одного массива
+4. Построить на их основе другой, упорядочив элементы по годам рождения. 
+5. Вывести результат. */
+
+struct humen {
+	char name[100];
+	char sname[100];
+	int year;
+};
+
+int main(int argc, char *argv[]) {
+	
+	/*int N = 4;
+	char * filename1 = "text_name.txt";
+	FILE*f1 = fopen("filename1", r);
+	
+	struct humen h1[N];
+	struct humen h2[N];
+	*/
+	
+	struct humen n;
+
+	
+	char str[] =  "mefed vika 2006";
+
+	
+	char str2[] = "Ivanov Sergey 1978";
+	char *substring;
+	//substring = str + 6;
+	//substring[4] = '\0';
+	//printf("%s", substring);
+	
+	//n.sname = 
+	
+	int l=strlen(str);
+	printf("Lenght = %d\n", l);
+	strcpy(n.sname,str);
+	char *p;
+	p=strchr(str,' ');
+	printf("%c\n", p);
+	n.sname[4] = '\0';
+	
+	printf("%s\n",n.sname );
+	/*for (int i=0;i<l-1;i++){
+		printf("%s\n", str[i]);
+		/*if (str[i]=' '){
+			substring = str;
+			substring[i] = '\0';
+			printf("%s", substring);
+		}
+	}*/
+	
+	
+	printf("end %d\n", l);
+	
+	return 0;
+}
