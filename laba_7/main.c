@@ -15,15 +15,15 @@
 
 	struct humen
 	{
-		char name[30];
-		char sname[30];
+		char name[100];
+		char sname[100];
 		int year;	
 	} ;
 
 int main(int argc, char *argv[]) {
 	
-    struct humen* h1;
-    struct humen* h2;
+    struct humen h1[4];
+    struct humen h2[4];
 
 	int N=4;//элемент массива из 4х
 	int i;//переменная для цикла
@@ -32,20 +32,49 @@ int main(int argc, char *argv[]) {
 	
 	for (i=0; i<N;i++)
 	{
-		printf("Enter a name: ");
+		printf("Enter %d persen: \n" , i+1);
+		
+		printf("Enter a name: ");	
 		scanf("%s",h1[i].name);
 		
 		printf("Enter your middle name: ");
 		scanf("%s", h1[i].sname);
 		
-		printf("Enter year of birth");
-		scanf("%d", h1[i].year);
+		printf("Enter year of birth: ");
+		scanf("%d", &h1[i].year);	
 	}
 	
+	for (i=0; i<N;i++)
+	{
+		printf("name: %s. ", h1[i].name);
+		printf("middle name: %s. ",  h1[i].sname);
+		printf("birth: %d. ", h1[i].year);
+		printf("\n");
+		
+		h2[i] = h1[i];	
+	}
+
 	
+	int temp;//3-я переменная для хранения значения
+	
+	for (int k=0; k<N-1; k++){
+		for (i=0;i<N-1;i++){
+			if(h2[i].year>h2[i+1].year){		//a,b,c
+				temp = h2[i+1].year;			//c=b
+				h2[i+1].year = h2[i].year;		//b=a
+				h2[i].year = temp;				//a=c		
+			}
+		}
+	}
+	printf("RESULT:\n");
+	for (i=0; i<N;i++)
+	{
+		printf("name: %s. ", h2[i].name);
+		printf("middle name: %s. ",  h2[i].sname);
+		printf("birth: %d. ", h2[i].year);
+		printf("\n");	
+	}	
 	
 	return 0;
 }
-
-
 
