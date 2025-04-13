@@ -60,9 +60,9 @@ int main(int argc, char *argv[]) {
 	for (int k=0; k<N-1; k++){
 		for (i=0;i<N-1;i++){
 			if(h2[i].year>h2[i+1].year){		//a,b,c
-				temp = h2[i+1].year;			//c=b
-				h2[i+1].year = h2[i].year;		//b=a
-				h2[i].year = temp;				//a=c		
+				temp = h2[i+1].year;		//c=b
+				h2[i+1].year = h2[i].year;	//b=a
+				h2[i].year = temp;		//a=c		
 			}
 		}
 	}
