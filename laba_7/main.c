@@ -11,7 +11,8 @@
 
 3. Ввести с консоли или из файла элементы одного массива
 4. Построить на их основе другой, упорядочив элементы по годам рождения. 
-5. Вывести результат. */
+5. Вывести результат. 
+*/
 
 	struct humen
 	{
@@ -20,6 +21,7 @@
 		int year;	
 	} ;
 
+
 int main(int argc, char *argv[]) {
 	
 	int N=4;//элемент массива из 4х
@@ -27,7 +29,6 @@ int main(int argc, char *argv[]) {
 	
     struct humen h1[N];
     struct humen h2[N];
-
 
 	
 	for (i=0; i<N;i++)
@@ -43,6 +44,7 @@ int main(int argc, char *argv[]) {
 		printf("Enter year of birth: ");
 		scanf("%d", &h1[i].year);	
 	}
+
 	
 	for (i=0; i<N;i++)
 	{
@@ -55,8 +57,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	
-	int temp;//3-я переменная для хранения значения
-	
+	int temp;                                              //3-я переменная для хранения значения
 	for (int k=0; k<N-1; k++){
 		for (i=0;i<N-1;i++){
 			if(h2[i].year>h2[i+1].year){		//a,b,c
@@ -66,6 +67,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
+	
 	printf("RESULT:\n");
 	for (i=0; i<N;i++)
 	{
