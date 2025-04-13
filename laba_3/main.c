@@ -6,7 +6,8 @@
 int main(int argc, char *argv[]) {
 	
  char s[80];
- int i, len;
+ int i;
+ int len;
  
  printf("vvedite stroky do 80ti simvolov:\n");
  scanf("%s", s);
