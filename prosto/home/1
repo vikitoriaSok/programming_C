@@ -1011,11 +1011,11 @@ int main() {
 
 
 //ЗАДАЧА 
-#inlude <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 /* 
-Дана длина ребра куба. Необходимо найти площадь одной грани, площадь полной поверхности и объем этого куба.
+Дана длина ребра куба. Необходимо найти 
+1. площадь одной грани
+2. площадь полной поверхности 
+3.объем этого куба.
 Входные данные:
 x
 
@@ -1028,13 +1028,18 @@ Sample Input:
 Sample Output:
 4 24 8
 */
-
-int main(){
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[]) {
 	
 	int a;
-	printf
+	
+	printf("Enter the side of the cube: ");
+	scanf("%d", &a);
+	printf("Cube edge length = %d", a);
 	
 	
 	
-	return 0;
-}
+	
+	
+	return 0;}
