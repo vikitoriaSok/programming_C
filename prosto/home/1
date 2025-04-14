@@ -1030,14 +1030,18 @@ Sample Output:
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 int main(int argc, char *argv[]) {
 	
 	int a;
+	int S1;
 	
 	printf("Enter the side of the cube: ");
 	scanf("%d", &a);
-	printf("Cube edge length = %d", a);
+	printf("Cube edge length = %d\n", a);
 	
+	S1 = pow(a,2);
+	printf("The area of one face of the cube = %d\n", S1);
 	
 	
 	
