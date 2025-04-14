@@ -1035,6 +1035,7 @@ int main(int argc, char *argv[]) {
 	
 	int a;
 	int S1;
+	int S2;
 	
 	printf("Enter the side of the cube: ");
 	scanf("%d", &a);
@@ -1042,6 +1043,9 @@ int main(int argc, char *argv[]) {
 	
 	S1 = pow(a,2);
 	printf("The area of one face of the cube = %d\n", S1);
+	
+	S2 = (6 * pow(a,2));
+	printf("The total surface area of the cube = %d\n", S2);
 	
 	
 	
