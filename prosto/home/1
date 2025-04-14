@@ -1051,6 +1051,6 @@ int main(int argc, char *argv[]) {
 	V = pow(a,3);
 	printf("Cube volume = %d\n", V);	
 	
-	
+	printf("RESULT = %d, %d, %d", S1, S2, V);
 	
 	return 0;}
