@@ -1057,7 +1057,7 @@ int main(int argc, char *argv[]) {
 
 
  //ЗАДАЧА
- /*
+/*
 Составить программу вычисления объема цилиндра и конуса, которые имеют одинаковую высоту h и одинаковый радиус основания r
 Входные данные:
 Два натуральных числа. Первое r-радиус основания в см, второе h -высота в сантиметрах.
@@ -1075,33 +1075,23 @@ Sample Input:
 
 Sample Output:
 
-11023.85 3674.62
-
-*/
-
+11023.85 3674.62*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 int main(int argc, char *argv[]) {
 	
-	int a;
-	int S1;
-	int S2;
-	int V;
+	int r;
+	int h;
+	float V;
+	float p = 3.14159265358979323846;
 	
-	printf("Enter the side of the cube: ");
-	scanf("%d", &a);
-	printf("Cube edge length = %d\n", a);
+	printf("Enter radios: ");
+	scanf("%d", &r);
+	printf("Enter visota: ");
+	scanf("%d", &h);
 	
-	S1 = pow(a,2);
-	printf("The area of one face of the cube = %d\n", S1);
-	
-	S2 = (6 * pow(a,2));
-	printf("The total surface area of the cube = %d\n", S2);
-	
-	V = pow(a,3);
-	printf("Cube volume = %d\n", V);	
-	
-	printf("RESULT = %d, %d, %d", S1, S2, V);
+	V = h * p * pow(r,2);
+	printf("V conusa = %.2f", V);
 	
 	return 0;}
