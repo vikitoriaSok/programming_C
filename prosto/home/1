@@ -1083,15 +1083,20 @@ int main(int argc, char *argv[]) {
 	
 	int r;
 	int h;
-	float V;
+	float V; //цилиндр
+	float v;//конус
 	float p = 3.14159265358979323846;
 	
-	printf("Enter radios: ");
+	printf("Enter the radius of the circle: ");
 	scanf("%d", &r);
-	printf("Enter visota: ");
+	printf("Enter the height: ");
 	scanf("%d", &h);
 	
 	V = h * p * pow(r,2);
-	printf("V conusa = %.2f", V);
+	printf("Cylinder volume = %.2f\n", V);
 	
+	v = 13 * h * p * pow(r,2);
+	printf("Cone volume = %.2f\n", v);
+	
+	printf("RESULT: %.2f, %.2f", V, v);	
 	return 0;}
