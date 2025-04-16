@@ -1150,3 +1150,28 @@ int main(){
 }
 
 
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int add(int num1, int num2){
+	return num1 + num2;
+}
+int main (void){
+
+	int num1;
+	int num2;
+	int res;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	
+	res = add(num1,num2);
+	printf("%d + %d = %d", num1,num2,res);		
+	
+	return 0;
+}
+
