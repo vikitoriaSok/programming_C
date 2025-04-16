@@ -1154,10 +1154,11 @@ int main(){
 
 //ЗАДАЧА
 #include <stdio.h>
-
+//функция
 int add(int num1, int num2){
 	return num1 + num2;
 }
+//основная функция
 int main (void){
 
 	int num1;
