@@ -1087,3 +1087,61 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+
+
+
+
+
+//ЗАДАЧА 
+/*Функция использует серию сравнений и обменов (temp = a; a = b; b = temp;),
+чтобы упорядочить три числа (a, b, c) по возрастанию. 
+В итоге, после всех сравнений переменная a будет содержать наименьшее из трех чисел, а b и c - два наибольших.
+Затем функция возвращает сумму b + c, которая и является суммой двух наибольших чисел.*/
+
+#include <stdio.h>
+
+
+int getSumMaxValues(int a, int b, int c) {
+	
+    int temp;
+
+    if (a > b) {
+        temp = a; a = b; b = temp;
+    }
+
+    if (b > c) {
+        temp = b; b = c; c = temp;
+    }
+
+    if (a > b) {
+        temp = a; a = b; b = temp;
+    }
+
+    return b + c;
+}
+
+int main() {
+    int v1;
+    int v2;
+    int v3;
+    int res;
+
+    //Вводим первую тройку и находим сумм 2х максимальных чисел
+    v1 = 4; 
+	v2 = 3;
+	v3 = 2;
+    res = getSumMaxValues(v1, v2, v3);
+    printf("1 res=: %d\n", res); 
+
+    //Вводим вторую тройку и находим сумм 2х максимальных чисел
+    v1 = 14; v2 = 31; v3 = 22;
+    res = getSumMaxValues(v1, v2, v3);
+    printf("2 res=: %d\n", res); 
+
+    //Вводим третью тройку и находим сумм 2х максимальных чисел
+    v1 = 24; v2 = 13; v3 = 12;
+    res = getSumMaxValues(v1, v2, v3);
+    printf("3 res=: %d\n", res);
+
+    return 0;
+}
