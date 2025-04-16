@@ -1176,3 +1176,22 @@ int main (void){
 	return 0;
 }
 
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int calculateSquare(int number){
+	return number * number;
+}
+int main (void){
+	
+	int number;
+	int res;
+	
+	printf("Enter number: ");
+	scanf("%d", &number);
+	
+	res = calculateSquare(number);
+	printf("%d * %d = %d", number,number,res);
+}
