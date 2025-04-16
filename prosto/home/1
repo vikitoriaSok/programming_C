@@ -1100,56 +1100,53 @@ int main(int argc, char *argv[]) {
 
 #include <stdio.h>
 
-
-int getSumMaxValues(int a, int b, int c) {
+int getSumMaxValues (int a, int b, int c){
 	
-    int temp;
-
-    if (a > b) {
-        temp = a; a = b; b = temp;
-    }
-
-    if (b > c) {
-        temp = b; b = c; c = temp;
-    }
-
-    if (a > b) {
-        temp = a; a = b; b = temp;
-    }
-
-    return b + c;
+	int temp;
+	
+	if (a > b){
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	if (a > c){
+		temp = a;
+		a = c;
+		c = temp;
+	}
+	if (a > b){
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	
+	return b + c;
 }
 
-int main() {
-    int v1;
-    int v2;
-    int v3;
-    int res;
-
-    //Вводим первую тройку и находим сумм 2х максимальных чисел
-    v1 = 4; 
+int main(){
+	
+	int v1;
+	int v2;
+	int v3;
+	int res;
+	
+	v1 = 4;
 	v2 = 3;
 	v3 = 2;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_1 = %d\n", res);
 	
-    res = getSumMaxValues(v1, v2, v3);
-    printf("1 res=: %d\n", res); 
-
-    //Вводим вторую тройку и находим сумм 2х максимальных чисел
-    v1 = 14;
+	v1 = 14;
 	v2 = 31;
 	v3 = 22;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_2 = %d\n", res);
 	
-    res = getSumMaxValues(v1, v2, v3);
-    printf("2 res=: %d\n", res); 
-
-    //Вводим третью тройку и находим сумм 2х максимальных чисел
-    v1 = 24;
+	v1 = 24;
 	v2 = 13;
 	v3 = 12;
-	
-    res = getSumMaxValues(v1, v2, v3);
-    printf("3 res=: %d\n", res);
-
-    return 0;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_3 = %d\n", res);
 }
+
 
