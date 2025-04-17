@@ -10,21 +10,51 @@
 */
 
 struct humen {
+	char fname[100];
 	char name [100];
 	char sname[100];
 	int year;
-	char gender;
-	float height;
+	char pol[1];
+	int height;
 };
+
+void Sort(char pole[10]){
+	
+	
+	
+	
+}
+
 
 int main(int argc, char *argv[]) {
 	
 	char * filename1 = "sos.txt";
+	//char buffer[256];
 	FILE*f1=fopen(filename1,"r");
 	if (f1 == NULL) {
         perror("Ошибка открытия файла");
         return 0; 
     }
+    
+	struct humen h[1000], t;
+    char fname [100], name[100], sname[100], pol[1];
+    int year, i=0;
+    int height;
+    while (fscanf(f1, "%s %s %s %d %s %d\n", fname, name, sname, &year, pol, &height) == 6){
+        strcpy(h[i].fname, fname);
+        strcpy(h[i].name, name);
+        strcpy(h[i].sname, sname);
+        strcpy(h[i].pol, pol);
+        h[i].year = year;
+        h[i].height = height;
+        i++;
+    }
+    
+    for ( int k=0; k<i; k++){
+    	printf("%d\n", h[k].year);
+	}
+    
+    
 
 	return 0;
 }
