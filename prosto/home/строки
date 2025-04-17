@@ -1,0 +1,15 @@
+СТРОКИ
+//ДЛИНА СТРОКИ  STRLEN() 
+
+#include <stdio.h>
+#include <string.h>
+int main (void){
+	char str[]="hello";
+	printf("len str = %zu\n", strlen(str));
+return 0;
+}
+
+
+
+
+//КОПИРОВАНИЕ СТРОК STRCOPY()
