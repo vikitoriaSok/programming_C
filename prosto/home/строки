@@ -70,3 +70,17 @@ return 0;
 //ДРУГИЕ ПОЛЕЗНЫЕ ФУНКЦИИ
 
 //ПОИСК СИМВОЛА В СТРОКЕ STRCHR()
+
+#include <stdio.h>
+#include <string.h>
+int main (void){	
+	char str[] = "hello word!";
+	char *prt = strchr(str, 'l'); //ищем l	
+	if (prt!=NULL){
+		printf("Find the symbol L at the position: %ld\n", prt - str);
+	}
+	
+return 0;
+}
+
+
