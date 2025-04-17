@@ -129,3 +129,25 @@ return 0;
 
 2.2 Цикл while
 пример: сумма чисел, пока не введен 0
+
+#include <stdio.h>
+#include <string.h>
+int main (void){			
+
+	int num;
+	int sum=0;
+	
+	printf("Enter numbers:\n");
+	scanf("%d",&num);
+	
+	while (num!=0){
+		sum += num; //она добавляет текущее значение num к переменной sum.  То есть, она накапливает сумму введенных чисел.
+		scanf("%d", &num);
+	}
+	printf("Summa = %d\n", sum);
+
+
+return 0;
+}
+
+
