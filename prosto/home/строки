@@ -1,4 +1,3 @@
-СТРОКИ
 //ДЛИНА СТРОКИ  STRLEN() 
 
 #include <stdio.h>
@@ -12,4 +11,15 @@ return 0;
 
 
 
+
 //КОПИРОВАНИЕ СТРОК STRCOPY()
+
+#include <stdio.h>
+#include <string.h>
+int main (void){	
+	char str[] = "copy me";
+	char dest[20];//место	
+	strcpy(dest,str);
+	printf("copy: %s\n", dest);	
+return 0;
+}
