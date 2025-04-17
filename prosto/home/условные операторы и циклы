@@ -44,3 +44,28 @@ return 0;
 
 1.3 Оператор else if (множественные условия)
 пример: определение оценки студента
+
+#include <stdio.h>
+#include <string.h>
+int main (void){		
+	
+	int score;
+	printf("Enrer the score: ");
+	scanf("%d", &score);
+	
+	if(score>=90){
+		printf("SUPER(5)");
+	}
+	else if (score>=70){
+		printf("WELL(4)");
+	}
+	else if (score>=50){
+		printf("satisfactory(3)");
+	}
+	else {
+		printf("bad");
+	}		
+return 0;
+}
+
+
