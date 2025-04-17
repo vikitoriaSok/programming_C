@@ -39,3 +39,27 @@ int main (void){
 return 0;
 }
 
+
+
+
+//СРАВНЕНИЕ СТРОК STRCMP()
+
+#include <stdio.h>
+#include <string.h>
+int main (void){	
+	int result;	
+	char str1[] = "apple";
+	char str2[] = "banana";	
+	result = strcmp(str1,str2);
+	if (result == 0){
+		printf("str1 = str2");
+	}
+	else if (result < 0){
+		printf("'%s' < '%s'\n", str1, str2);
+	}
+	else{
+		printf("'%s' > '%s'\n", str1, str2);
+	}
+	
+return 0;
+}
