@@ -75,3 +75,27 @@ return 0;
 1.4 Оператор switch
 -используется для множественного выбора (фльтернатива else if)
 пример: выбор действия по номеру
+
+#include <stdio.h>
+#include <string.h>
+int main (void){		
+	
+	int choice;
+	printf("Enter number 1-3: ");
+	scanf("%d", &choice);	
+	switch(choice){
+		case 1:
+			printf("I selected item 1\n");
+			break;
+		case 2:
+			printf("I selected item 2\n");
+			break;
+		case 3:
+			printf("I selected item 3\n");
+			break;
+		default:
+			printf("Error");			
+	}		
+return 0;
+}
+
