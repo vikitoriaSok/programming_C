@@ -1195,3 +1195,28 @@ int main (void){
 	res = calculateSquare(number);
 	printf("%d * %d = %d", number,number,res);
 }
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main (void){
+	
+	int num;
+	printf("Enter number: ");
+	scanf("%d", &num);
+		
+	if (num>=90){
+		printf("super(5)\n");
+	}
+	else if (num>=70){
+		printf("cool(4)\n");
+	}
+	else if (num>=50){
+		printf("not cool(3)\n");
+	}
+	else{
+		printf("bad\n");
+	}
+return 0;
+}
