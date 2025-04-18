@@ -5,3 +5,129 @@
 4. Указать элемент, по которому следует упорядочить, через консоль. 
 5. А также реализовать возможность задавать несколько полей для упорядочивания. 
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//структура хранит информацию о человеке
+struct humen {
+    char fname[100];    
+    char name[100];     
+    char sname[100];   
+    int year;           
+    char pol[2];       
+    int height;         
+};
+
+//Функция сравнения для сортировки
+//принимаем два указателя на на данные (a и b) и массив полей для сортировки.     *a первый элемент сравнения
+//compare преобразует указатели к типу struct humen*
+//сравнивает записи по указанным полям: Для числовых полей (year, height) - вычитание, Для строковых полей - strcmp. Если все поля равны, возвращает 0
+//*fields массив полей сортировки
+//field_count колво полей сортировки
+/*запускаем цикл по количесву полей сортировки.
+Если сравниваемые первые поля равны, то переходим к следующему.
+Иначе выходим из функции с числом меньше 0, больше нуля, равным нулю*/
+int compare(const void *a, const void *b, char *fields[], int field_count) {
+    struct humen *h1 = (struct humen *)a;//переменная h1 как структура humen присвоили ссылку на а
+    struct humen *h2 = (struct humen *)b;
+
+    for (int i = 0; i < field_count; i++) {
+        if (strcmp(fields[i], "year") == 0) {
+            if (h1->year != h2->year) return h1->year - h2->year;
+        }
+        else if (strcmp(fields[i], "fname") == 0) {
+            int cmp = strcmp(h1->fname, h2->fname);
+            if (cmp != 0) return cmp;
+        }
+        else if (strcmp(fields[i], "name") == 0) {
+            int cmp = strcmp(h1->name, h2->name);
+            if (cmp != 0) return cmp;
+        }
+        else if (strcmp(fields[i], "sname") == 0) {
+            int cmp = strcmp(h1->sname, h2->sname);
+            if (cmp != 0) return cmp;
+        }
+        else if (strcmp(fields[i], "pol") == 0) {
+            int cmp = strcmp(h1->pol, h2->pol);
+            if (cmp != 0) return cmp;
+        }
+        else if (strcmp(fields[i], "height") == 0) {
+            if (h1->height != h2->height) return h1->height - h2->height;
+        }
+    }
+    return 0;
+}
+
+//Внешний цикл проходит по всем элементам
+//Внутренний цикл сравнивает соседние элементы
+//Если порядок неправильный (сравнение возвращает >0) - меняет их местами
+void sort_humen(struct humen *arr, int count, char *fields[], int field_count) {
+    for (int i = 0; i < count - 1; i++) {
+        for (int j = 0; j < count - i - 1; j++) {
+            if (compare(&arr[j], &arr[j+1], fields, field_count) > 0) {
+                struct humen temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    char *filename = "sos3.txt";
+    FILE *file = fopen(filename, "r");//открытие файла 
+    if (file == NULL) {
+        printf("Couldn't open the fileл %s\n", filename);
+        return 1;
+    }
+    
+    struct humen people[1000];
+    int count = 0;
+    
+    // Чтение данных
+    while (fscanf(file, "%s %s %s %d %s %d", //чтение данных
+                 people[count].fname,
+                 people[count].name,
+                 people[count].sname,
+                 &people[count].year,
+                 people[count].pol,
+                 &people[count].height) == 6) {
+        count++;
+    }
+    fclose(file);
+    
+    // Выбор полей для сортировки
+    printf("Available fields for sorting:\n");
+    printf("fname\nname\nsname\nyear\npol\nheight\n\n");
+    printf("Enter the fields to sort them separated by a space: ");
+    
+    char input[256];
+    fgets(input, sizeof(input), stdin);//ввод параметров сортироки 
+    
+    // Разбиваем ввод на поля
+    char *fields[10];
+    int field_count = 0;
+    char *token = strtok(input, " \n");
+    while (token != NULL && field_count < 10) {
+        fields[field_count++] = token;
+        token = strtok(NULL, " \n");
+    }
+    
+    // Сортировка
+    sort_humen(people, count, fields, field_count);
+    
+    // вывод
+    printf("\nSorting result:\n");
+    for (int i = 0; i < count; i++) {
+        printf("%s %s %s %d %s %d\n", 
+               people[i].fname,
+               people[i].name,
+               people[i].sname,
+               people[i].year,
+               people[i].pol,
+               people[i].height);
+    }
+    
+    return 0;
+}
