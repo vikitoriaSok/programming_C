@@ -1,1 +1,1278 @@
+//МАССИВЫ
+//ЗАДАЧА
+//поиск максимального элемента в массиве
+#include <stdio.h>
+int main (void){
+	
+	int arr[] = {5,2,9,1,7};
+	int size = sizeof(arr) / sizeof(arr[0]); //узнаем размер массива
+	int max = arr[0];//предпологаем, что первый элемент массива - максимальный
+	for (int i=1; i<size;i++){
+		if (arr[i]>max){
+			max = arr[i];
+		}
+	} 
+	printf("MAX = %d\n", max);		
+return 0;
+}
 
+
+//ЗАДАЧА
+
+#include <stdio.h>
+int main(void) {
+	
+	int num[4];
+	num[0]=1;
+	num[1]=2;
+	num[2]=3;
+	num[3]=4;
+	num[4]=5;
+	
+	printf("num[0]=%d\n", num[0]);
+	printf("num[4]=%d", num[4]);}
+
+ 
+
+//ЗАДАЧА
+#include <stdio.h>
+int main(void) {
+	
+	int numbers[4] = { 1, 2, 3, 5 };       
+	printf("numbers[2] = %d", numbers[2]);
+	return 0;}
+
+
+
+//ЗАДАЧА 
+/*Напишите программу, в которой определите массив символов и выведете его на консоль с помощью спецификатора %s:*/
+#include <stdio.h>
+
+int main(void) {
+
+	char message[]="Hello, Vika!";
+	printf("%s\n", message);
+	
+  return 0;}
+
+
+
+
+
+
+//ЗАДАЧА
+1.Напишите программу, в которой определите массив из четырех чисел - {1, 2, 3, 4}. 
+2. Увеличьте первый и последний элементы массива в два раза.
+3.Выведите все элементы массива на консоль.
+
+#include <stdio.h>
+int main(void) {
+
+	int numbers[4]={1,2,3,4};
+	numbers[0]=numbers[0]*2;
+	numbers[3]=numbers[3]*2;
+	
+	for (int i=0; i<4; i++)
+	{
+		printf("%d", numbers[i]);
+		printf("\n");
+	}
+
+  return 0;}
+
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+/*1.Напишите программу, в которой определите массив из четырех чисел - {1, 2, 3, 4}. 
+2. Увеличьте все элементы массива в два раза. В
+3.ведите все элементы массива на консоль.*/
+int main()
+{
+    int numbers[] = {1, 2, 3, 4};  
+    numbers[0] = numbers[0] * 2;  
+
+    for(int i = 0; i < 4; i++)
+    {
+        numbers[i] = numbers[i] * 2;
+    }
+
+    for(int i = 0; i < 4; i++)
+    {
+        printf("%d", numbers[i]);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+int main() {
+
+  int a;
+  int b;
+  int c;
+  int w;
+  int k;
+  int sum;
+
+  printf("Enter a:\n");
+  scanf("%d", &a);
+
+  printf("Enter b:\n");
+  scanf("%d", &b);
+
+  c = a * b;
+  printf("C = %d\n", c); 
+  
+  w = a + b;
+  printf("W = %d\n", w);
+  
+  k = a / b;
+  printf("K = %d\n", k);
+  
+  sum = ((c + w)/k);
+  printf("sum = %d\n", sum);
+  
+  if (sum < 100 && sum > 20)
+  {
+  	printf("DOG\n");
+  }
+  else
+  {
+  	printf("CAT\n");
+  }
+  
+  
+  return 0;}
+
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+/*Вычисление индекса массы тела*/
+
+int main() {
+
+  int weight;
+  int height;
+  float index;
+
+  printf("Enter your weight in kg:\n");
+  scanf("%d", &weight);
+
+  printf("Enter your height in meters:\n");
+  scanf("%d", &height);
+
+  index = (float)weight / (height * height);
+  printf("Your body mass index: %.2f\n", index);
+
+  if (index < 18.5) 
+  {
+    printf("Underweight\n");
+  }
+  
+  if (index >= 18.5 && index <= 24.9) 
+  { 
+    printf("Normal weight\n");
+  }
+  
+  if (index >= 25.0 && index <= 29.9) 
+  { 
+    printf("Overweight\n");
+  }
+  
+  if (index > 30) 
+  {
+    printf("Fatness\n");
+  }
+  
+  return 0;}
+//Менее 18.5: Недостаточный вес
+// 18.5 - 24.9: Нормальный вес
+//  25.0 - 29.9: Избыточный вес
+//  30.0 и выше: Ожирение
+
+//ЗАДАЧА
+
+#include <stdio.h>
+/*Сумма элементов массива:*/
+int main() {
+  int a[] = {1, 2, 3, 4, 5}, s = 0;
+  for (int i = 0; i < 5; i++) s += a[i];
+  printf("summa: %d\n", s);
+  return 0;}
+
+
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main(void)
+{
+    int vika[4];
+    vika[0]=1;
+    vika[1]=2;
+    vika[2]=3;
+    vika[3]=4;
+    
+    printf("vika[0]=%d\n", vika[0]);    
+    return 0;}
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+void hello_world()
+{
+	printf("Hello world\n");
+}
+
+int main(void)
+{
+  hello_world();
+    return 0;}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int vika(int a, int b) 
+{
+  int z; 
+  z = a + b;
+
+  return(z);
+}
+
+int main() {
+  int a = 2;
+  int b = 8;
+  int result;
+
+  result = vika(a, b);
+  printf("Result: %d\n", result); 
+
+  return 0;
+}
+
+
+
+
+//ПОВТОРЕНИЕ
+//ЗАДАЧА 1
+/*Напишите программу, которая выводит на экран "Hello, World!".*/
+
+#include <stdio.h>
+int main() {
+  printf("Hello, World!\n");
+  return 0;
+}
+
+//ЗАДАЧА 2
+/*Напишите программу, которая запрашивает у пользователя имя и выводит приветствие с этим именем.*/
+#include <stdio.h>
+
+int main() {
+  char name[50]; // Ìàññèâ äëÿ õðàíåíèÿ èìåíè (ìàêñèìóì 49 ñèìâîëîâ + '\0')
+
+  printf("Enter name: ");
+  scanf("%s", name);
+
+  printf("Hello, %s!\n", name);
+  return 0;
+}
+
+
+//ЗАДАЧА 3. АРИФМЕТИЧЕСКИЕ ОПЕРАЦИИ.
+#include <stdio.h>
+/*Напишите программу, которая запрашивает у пользователя два числа
+выводит их сумму,
+разность,
+произведение,
+частное.*/
+int main() {
+
+	int num1;
+	int num2;
+	int sum;
+	int difference;
+	int composition;
+	int privat;
+	
+	printf("Enter number: ");
+	scanf("%d", &num1);
+	
+	printf("Enter number: ");
+	scanf("%d", &num2);
+	
+	sum = num1 + num2;
+	printf("Summa = %d\n", sum);
+	
+	difference = num1-num2;
+	printf("Difference = %d\n", difference);
+	
+	composition = num1 * num2;
+	printf("Composition = %d\n", composition);
+	
+	if (num2!=0)
+{
+	printf("Privat = %d\n", num1/num2);
+}
+	else
+	{
+	printf("Mistake!\n");
+	}
+  return 0;
+}
+
+
+
+//ЗАДАЧА. УСЛОВИЯ.
+/*Напишите программу, которая запрашивает у пользователя число и определяет, является ли оно положительным, отрицательным или нулем.*/
+#include <stdio.h>
+int main() {
+
+	int num;
+	printf("Enter numbers: ");
+	scanf("%d", &num);
+	
+	if (num<0)
+	{
+		printf("the number is negative\n");
+	}
+	
+	else if (num>0)
+	{
+		printf("the number is positive\n");
+	}
+	else
+	{
+		printf("the number is zero\n");
+	}
+  return 0;
+}
+
+
+//ЗАДАЧА. ЦИКЛЫ.
+#include <stdio.h>
+/*Напишите программу, которая выводит таблицу умножения для заданного числа*/
+
+int main() {
+  int num, i;
+
+  printf("Enter a number for the multiplication table: ");
+  scanf("%d", &num);
+
+  printf("Multiplication table for %d:\n", num);
+  for (i = 1; i <= 10; i++) {
+    printf("%d x %d = %d\n", num, i, num * i);
+  }
+
+  return 0;
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+/*Дана сторона квадрата a. Найти его площадь S*/
+
+int main() {
+  
+  int a;
+  int s;
+  
+  printf("Enter a: ");
+  scanf("%d", &a);
+  
+  s=a*a;
+  printf("S = %d", s);
+
+  return 0;
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+/*Даны катеты прямоугольного треугольника a и b. Найти его гипотенузу c и периметр P*/
+
+int main() {
+  
+  int side1;
+  int side2;
+  int m;
+  int hypotenuse;
+  int perimeter;
+  
+  printf("Enter side one: ");
+  scanf("%d", &side1);
+  
+  printf("Enter side two: ");
+  scanf("%d", &side2);
+  
+  m = side1 + side2;
+  printf("a + b = %d\n", m);
+  
+  hypotenuse = sqrt(m);
+  printf("hypotenuse = %d\n", hypotenuse);
+  
+  perimeter = side1 + side2 + hypotenuse;
+  printf("perimeter = %d", perimeter);
+    
+  return 0;
+}
+
+
+
+
+  //ЗАДАЧА
+  #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Дана сторона квадрата a. Найти его периметр P = 4·a.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int p;
+	
+	printf("ENTER A: ");
+	scanf("%d", &a);
+	
+	p=4*a;
+	printf("PERIMETER = %d", p);
+
+ return 0; 
+}
+
+  
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	int B;
+	int C;
+	int AB;
+	int BC;
+	int sum;
+	
+	printf("ENTER A: ");
+	scanf("%d", &A);
+	printf("ENTER B: ");
+	scanf("%d", &B);
+	printf("ENTER C: ");
+	scanf("%d", &C);
+	
+	AB = A+B;
+	printf("A+B = %d\n", AB);
+	
+	BC = B + C;
+	printf("A+B = %d\n", BC);
+	
+	sum = AB + BC;
+	printf("AB+BC = %d", sum);
+
+ return 0;
+ 
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Найти значение функции y = 3x^6- 6x^2 - 7 при данном значении x.
+*/
+
+int main(int argc, char *argv[]) {
+	
+	int x;
+	int y;
+	
+	printf("ENTER X: ");
+	scanf("%d", &x);
+	
+	y=(3*pow(x,6)-6*pow(x,2)-7);
+	printf("Y = %d", y);
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	int x;
+	int y;
+	int res;
+	
+	//printf("ENTER X: ");
+	//scanf("%d",&x);
+	//printf("ENTER Y: ");
+	//scanf("%d", &y);
+	x = 10;
+	x += 10;
+	y = 20;
+	
+	res = x + y;
+	printf("VARIABLE: %d + %d = %d\n", x, y,res);
+	res = x - y;
+	printf("VARIABLE: %d - %d = %d\n", x, y,res);
+	res = x / y;
+	printf("VARIABLE: %d / %d = %d\n", x, y,res);
+	res = y / x;
+	printf("VARIABLE: %d / %d = %d\n", x, y,res);
+	res = (x*x*x * y/x);
+	printf("VARIABLE: %d * %d = %d\n", x, y,res);
+	
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Дана масса M в килограммах.
+Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг).*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int M;
+	int T;
+	
+	printf("Enter the weight in kg: ");
+	scanf("%d", &M);
+	
+	T = M / 1000;
+	
+	printf("Number of tons per %d kg = %d", M, T);
+	
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Дано целое число A. 
+Проверить истинность высказывания: «Число A является положительным».*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	
+	printf("Enter number A: ");
+	scanf("%d", &A);
+	
+	if (A>=0){
+		printf("Tne number A is positiv.");
+	}
+	else
+	{
+		printf("The number A is negative.");
+	}
+	
+	
+ return 0;
+ 
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три целых числа: A, B, C. 
+Проверить истинность высказывания: «Число B находится между числами A и C».*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int A;
+	int B;
+	int C;
+	
+	printf("Enter number A: ");
+	scanf("%d", &A);
+	
+	printf("Enter number B: ");
+	scanf("%d", &B);
+	
+	printf("Enter number C: ");
+	scanf("%d", &C);
+	
+	if ((A<B && B<C) || (C < B && B < A)) {
+		printf("TRUE");
+	}
+	else
+	{
+		printf("FALSE");
+	}
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/* Дано целое число.
+Если оно является положительным, то вычесть из него 8;
+если отрицательным, то прибавить к нему 6;
+если нулевым, то заменить его на 10.
+Вывести полученное число.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num;
+	
+	printf("Enter number: ");
+	scanf("%d", &num);
+	
+	if(num>0){
+		num = num - 8;
+		printf("Number = %d", num);
+	}
+	else if (num<0){
+		num = num + 6;
+		printf("Number = %d", num);
+	}
+	else
+	{
+		num = 10;
+		printf("Number = %d", num);
+	}
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три числа.
+Найти сумму двух наибольших из них.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num1;
+	int num2;
+	int num3;
+	int max_1;
+	int max_2;
+	int sum;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	printf("Enter number three: ");
+	scanf("%d", &num3);
+	
+	max_1 = num1;
+	if (num2>max_1){
+		max_1 = num2;
+	}
+	if (num3>max_1){
+		max_1 = num3;
+	}
+	printf("MAX_1 = %d\n",max_1);
+	
+
+	if ((num1<num2 && num2<num3)||(num3<num2 && num2<num1)){
+		max_2 = num2;
+	}
+	if ((num2<num1 && num1<num3)||(num3<num1 &&  num1<num2)){
+		max_2 = num1;
+	}
+	if ((num1<num3 && num3<num2)||(num2<num3 &&  num3<num1)){
+		max_2 = num3;
+	}
+	printf("MAX_2 = %d\n", max_2);
+	
+	sum = max_1 + max_2;
+	printf("SUMMA = %d", sum);
+
+ return 0;
+ 
+}
+
+
+
+//ЗАДАЧА 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/*Даны три числа.
+Найти сумму двух наибольших из них.*/
+
+
+int main(int argc, char *argv[]) {
+	
+	int num1;
+	int num2;
+	int num3;
+	int sum;
+	int summa2;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	printf("Enter number three: ");
+	scanf("%d", &num3);
+	
+	sum = num1 + num2 + num3;
+	printf("SUMMA = %d\n", sum);
+	
+	int min = num1;
+	if (num2<min){
+		min = num2;
+	}
+	if (num3<min){
+		min = num3;
+	}
+	printf("MIN = %d\n", min);
+	
+	summa2 = sum - min;
+	printf("Summa_2x = %d", summa2);
+	
+ return 0;
+ 
+}
+
+
+//ЗАДАЧА 
+/*Даны целые числа K и N (N > 0).
+Вывести N раз число K.*/
+
+#include <stdio.h>
+
+int main() {
+  int K;//число
+  int N;//количество раз
+  int i;
+
+  printf("Enter Number K: ");
+  scanf("%d", &K);
+  printf("Enter the quantity N: ");
+  scanf("%d", &N);
+
+  for (i = 0; i < N; i++) {
+    printf("%d ", K);
+  }
+
+
+
+//ЗАДАЧА
+/*Дано вещественное число — цена 1 кг конфет. 
+Вывести стоимость 1, 2, …, 10 кг конфет*/
+
+#include <stdio.h>
+
+int main() {
+  
+  float price_kg;
+  int i; 
+  
+  printf("Enter the price per kg: ");
+  scanf("%f", &price_kg);
+  
+  printf("Coast:\n");
+  
+  for(i=1; i<=10;i++){
+  	printf("%d kg: %.2f\n", i, i * price_kg);
+  }
+
+  return 0;
+}
+
+
+  return 0;
+}
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+/* Дано вещественное число — цена 1 кг конфет. Вывести стоимость 0.1, 0.2, …, 1 кг конфет.*/
+int main(){
+	
+	float price_1kg;
+	float i;
+	
+	printf("Enter the price per kg: ");
+	scanf("%f", &price_1kg);
+	printf("Coast:\n");
+	for (i=0.1;i<1;i+=0.1){
+		printf("%.1f kg: %.1f rub\n",i,i*price_1kg);		
+	}
+	
+	return 0;
+}
+
+
+
+//ЗАДАЧА
+/*Дано вещественное число — цена 1 кг конфет.
+Вывести стоимость 1.2, 1.4, …, 2 кг конфет.*/
+
+#include <stdio.h>
+
+int main() {
+  
+  float price_kg;
+  float i;
+  
+  printf("Enter the price per kg: ");
+  scanf("%f", &price_kg);
+  printf("Coast:\n");
+  
+  for (i=1.2;i<=2;i+=0.2){
+  	printf("%.1f kg: %.1f rub\n",i,i*price_kg);
+  }
+
+  return 0;
+}
+
+
+
+
+//ЗАДАЧА
+/*Даны два целых числа A и B (A < B).
+Найти сумму всех целых чисел от A до B включительно.*/
+
+#include <stdio.h>
+
+int main() {
+
+	int A;
+	int B;
+	int i;
+	int sum=0;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	printf("Enter B: ");
+	scanf("%d", &B);
+	
+	if (A>=B){
+		printf("ERROR");	
+	}
+	
+	for (i=A;i<=B;i++){
+		sum+=i; // sum = sum + i;
+	}
+	printf("The sum of integers from %d before %d = %d", A,B,sum);
+
+  return 0;
+}
+
+
+//ЗАДАЧА
+/*Вывод таблицы умножения:
+Напишите программу, которая выводит таблицу умножения для заданного числа N (например, от 1 до 10).*/
+
+#include <stdio.h>
+
+int main() {
+
+	int N;
+	int i;
+	
+	printf("Enter number: ");
+	scanf("%d", &N);
+	
+	for (i=1;i<N;i++){
+		printf("%d * %d = %d\n", N,i,N*i);
+	}
+	
+  return 0;
+}
+
+
+//ЗАДАЧА
+/*
+Даны два целых числа A и B (A < B).
+Найти произведение всех целых чисел от A до B включительно.
+*/
+
+#include <stdio.h>
+
+int main() {
+
+	int A;
+	int B;
+	int i;
+	int composition;
+	
+	printf("Enter A: ");
+	scanf("%d", &A);
+	printf("Enter B: ");
+	scanf("%d", &B);
+	
+	if (A>=B){
+		printf("ERROR");
+		return 1;
+	}
+	for (i=A;i<=B;i++){
+		composition *= i;//product = product * i;
+	}
+	printf("The product of all integers from %d to %d inclusive = %d", A,B,composition);
+	
+  return 0;
+}
+
+
+//ЗАДАЧА 
+/*
+1. Объявить массив данных типа double размером 3 на 3.
+2. Ввести с консоли его значения
+3. Вывести на консоль сумму его элементов, расположенных на главной диагонали
+4. Вывести на консоль сумму элементов, расположенных на  побочной диагонали.
+
+1. Объявить массив данных типа int размером 2 на 2. 
+2. Ввести с консоли его значе-ния, вывести на консоль квадрат данной матрицы.
+*/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+	int n; //размер матрицы
+	int i;//строки
+	int j;//столбцы
+	int N;
+	int sum=0;
+	int prod=1;
+	
+	printf("Enter the side of the matrix: ");
+	scanf("%d",&n);
+	
+	double massiv[n][n];
+	
+	N = pow(n,2);
+	
+	printf("Enter %d numbers for the array int:\n", N);
+		
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			printf("matrix[%d][%d]: ", i,j);
+			scanf("%lf", &massiv[i][j]);
+		}
+	}
+	for (i=0;i<n;i++){
+		for (j=0;j<n;j++){
+			sum += massiv[i][j];
+			prod *= massiv[i][j];
+		}
+	}
+	printf("SUMMA = %d\n", sum);
+	printf("PROD = %d", sum);
+	
+
+  return 0;
+}
+
+
+
+//ЗАДАЧА 
+/* 
+Дана длина ребра куба. Необходимо найти 
+1. площадь одной грани
+2. площадь полной поверхности 
+3.объем этого куба.
+Входные данные:
+x
+
+- длина ребра куба, целое число.
+
+Выходные данные:
+Три числа, записанные через пробел. Первое -- площадь грани куба, второе -- площадь полной поверхности куба, третье число -- объем куба.
+Sample Input:
+2
+Sample Output:
+4 24 8
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(int argc, char *argv[]) {
+	
+	int a;
+	int S1;
+	int S2;
+	int V;
+	
+	printf("Enter the side of the cube: ");
+	scanf("%d", &a);
+	printf("Cube edge length = %d\n", a);
+	
+	S1 = pow(a,2);
+	printf("The area of one face of the cube = %d\n", S1);
+	
+	S2 = (6 * pow(a,2));
+	printf("The total surface area of the cube = %d\n", S2);
+	
+	V = pow(a,3);
+	printf("Cube volume = %d\n", V);	
+	
+	printf("RESULT = %d, %d, %d", S1, S2, V);
+	
+	return 0;}
+
+
+ //ЗАДАЧА
+/*
+Идёт k секунда суток.
+Определить, сколько целых часов и целых минут прошло с начала суток.
+
+Sample Input:
+34961
+Sample Output:
+9 42
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+
+  double k;
+  int hours;
+  int minutes;
+
+  printf("Enter the number of seconds: "); 
+  scanf("%lf", &k);
+
+  hours = (int)(k / 3600);  // Вычисляем целое количество часов
+  minutes = (int)((k - hours * 3600) / 60); // Вычисляем оставшиеся минуты
+
+  printf("%d hours, %d minutes\n", hours, minutes); 
+
+  return 0;
+}
+
+
+
+
+
+
+//ЗАДАЧА 
+/*Функция использует серию сравнений и обменов (temp = a; a = b; b = temp;),
+чтобы упорядочить три числа (a, b, c) по возрастанию. 
+В итоге, после всех сравнений переменная a будет содержать наименьшее из трех чисел, а b и c - два наибольших.
+Затем функция возвращает сумму b + c, которая и является суммой двух наибольших чисел.*/
+
+#include <stdio.h>
+
+int getSumMaxValues (int a, int b, int c){
+	
+	int temp;
+	
+	if (a > b){
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	if (a > c){
+		temp = a;
+		a = c;
+		c = temp;
+	}
+	if (a > b){
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	
+	return b + c;
+}
+
+int main(){
+	
+	int v1;
+	int v2;
+	int v3;
+	int res;
+	
+	v1 = 4;
+	v2 = 3;
+	v3 = 2;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_1 = %d\n", res);
+	
+	v1 = 14;
+	v2 = 31;
+	v3 = 22;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_2 = %d\n", res);
+	
+	v1 = 24;
+	v2 = 13;
+	v3 = 12;
+	res = getSumMaxValues(v1,v2,v3);
+	printf("res_3 = %d\n", res);
+}
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+//функция
+int add(int num1, int num2){
+	return num1 + num2;
+}
+//основная функция
+int main (void){
+
+	int num1;
+	int num2;
+	int res;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	
+	res = add(num1,num2);
+	printf("%d + %d = %d", num1,num2,res);		
+	
+	return 0;
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int calculateSquare(int number){
+	return number * number;
+}
+int main (void){
+	
+	int number;
+	int res;
+	
+	printf("Enter number: ");
+	scanf("%d", &number);
+	
+	res = calculateSquare(number);
+	printf("%d * %d = %d", number,number,res);
+}
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main (void){
+	
+	int num;
+	printf("Enter number: ");
+	scanf("%d", &num);
+		
+	if (num>=90){
+		printf("super(5)\n");
+	}
+	else if (num>=70){
+		printf("cool(4)\n");
+	}
+	else if (num>=50){
+		printf("not cool(3)\n");
+	}
+	else{
+		printf("bad\n");
+	}
+return 0;
+}
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main (void){
+	
+	int numbers[5]={10,20,30,40,50};
+	
+	for(int i=0; i<5;i++){
+		printf("numbers[%d] = %d\n",i,numbers[i]);
+	}
+	
+return 0;
+}
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+
+int main (void){
+	
+	int matrix[2][3] = {//две строки и три столбца
+		{1, 2, 3},
+		{4, 5, 6}
+	
+	};
+	
+	for (int i=0;i<2;i++){
+		for (int j=0;j<3;j++){
+			printf("%d ", matrix[i][j]);
+		}
+		printf("\n");
+	}
+	
+		
+return 0;
+}
