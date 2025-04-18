@@ -176,3 +176,15 @@ int main() {
 break - досрочный выход из цикла
 continue - переход к следующей итерации
 пример: пропуск четных чисел
+
+#include <stdio.h>
+int main() {
+    for(int i=1;i<=10;i++){
+    	if (i%2==0){
+    		continue; //пропускаем четные
+		}
+		printf("%d", i);
+	}   
+    return 0;
+}
+
