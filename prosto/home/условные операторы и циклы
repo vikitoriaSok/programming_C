@@ -155,3 +155,16 @@ return 0;
 2.3 Цикл do - while
 -отличается от while тем, что гарантированно выполнится хотя бы один раз
 пример: запрос пароля
+
+#include <stdio.h>
+int main() {
+    int password;
+    const int correctPassword = 1234    
+    do {
+        printf("Enter password: ");
+        scanf("%d", &password);
+    } while (password != correctPassword);    
+    printf("Open!\n");   
+    return 0;
+}
+
