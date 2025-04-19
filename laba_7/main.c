@@ -90,69 +90,86 @@ int main(int argc, char *argv[]) {
 
 
 /7.2
-	#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/*Тип «структура» в языке Си — это композитный тип данных, объединяющий данные разных типов под одним именем.
+Он позволяет трактовать группу связанных между собой объектов не как множество отдельных элементов, а как единое целое.*/
 
+
+#include <stdio.h>
+#include <stdlib.h>
 
 /*
 1. Объявить тип-структуру humen, включающую имя человека, фамилию и год рождения.
 2. Объявить два массива из четырёх элементов типа humen.
-
 3. Ввести с консоли или из файла элементы одного массива
 4. Построить на их основе другой, упорядочив элементы по годам рождения. 
-5. Вывести результат. */
+5. Вывести результат. 
+*/
 
-struct humen {
-	char name[100];
-	char sname[100];
-	int year;
-};
+struct humen
+	{
+		char fname[100];
+		char name[100];	
+		char sname[100];
+		int year;	
+	} ;
 
+//объявила файл	
 int main(int argc, char *argv[]) {
-	
-	/*int N = 4;
-	char * filename1 = "text_name.txt";
-	FILE*f1 = fopen("filename1", r);
-	
-	struct humen h1[N];
-	struct humen h2[N];
-	*/
-	
-	struct humen n;
+    
+    FILE *f = fopen("sos.txt", "r");
+    if (f == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+//Считаю количество записей в файле
+int N = 0;
+int i;
+char buffer[256];
+while (fgets(buffer, sizeof(buffer), f)) {
+        N++;}
+    rewind(f); //перемещаю указатель в начало файла
+    
+    struct humen h1[N];
+    struct humen h2[N];
+//читаю данных из файла
+for (i=0;i<N;i++){
+	fscanf(f," %s %s %s %d", h1[i].fname, h1[i].name, h1[i].sname, &h1[i].year);
+	h2[i] = h1[i]; 
+} fclose(f);
 
 	
-	char str[] =  "mefed vika 2006";
+	for (i=0; i<N;i++)
+	{
+		printf("Fname: %s ", h1[i].fname);
+		printf("Name: %s ", h1[i].name);		
+		printf("Middle name: %s ",  h1[i].sname);
+		printf("Birth: %d. ", h1[i].year);
+		printf("\n");		
+		h2[i] = h1[i];	
+	}
+	return 0;
 
 	
-	char str2[] = "Ivanov Sergey 1978";
-	char *substring;
-	//substring = str + 6;
-	//substring[4] = '\0';
-	//printf("%s", substring);
-	
-	//n.sname = 
-	
-	int l=strlen(str);
-	printf("Lenght = %d\n", l);
-	strcpy(n.sname,str);
-	char *p;
-	p=strchr(str,' ');
-	printf("%c\n", p);
-	n.sname[4] = '\0';
-	
-	printf("%s\n",n.sname );
-	/*for (int i=0;i<l-1;i++){
-		printf("%s\n", str[i]);
-		/*if (str[i]=' '){
-			substring = str;
-			substring[i] = '\0';
-			printf("%s", substring);
+	int temp;                                 //3-я переменная для хранения значения
+	for (int k=0; k<N-1; k++){
+		for (i=0;i<N-1;i++){
+			if(h2[i].year>h2[i+1].year){     //a,b,c
+				temp = h2[i+1].year;	     //c=b
+				h2[i+1].year = h2[i].year;	  //b=a
+				h2[i].year = temp;		     //a=c		
+			}
 		}
-	}*/
-	
-	
-	printf("end %d\n", l);
+	}
+//выводится результат	
+	printf("RESULT:\n");
+	for (i=0; i<N;i++)
+	{
+		printf("Fname: %s. ", h2[i].fname);
+		printf("Name: %s. ", h2[i].name);
+		printf("Middle name: %s. ",  h2[i].sname);
+		printf("Birth: %d. ", h2[i].year);
+		printf("\n");	
+	}	
 	
 	return 0;
 }
