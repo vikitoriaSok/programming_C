@@ -1315,3 +1315,75 @@ int main (void){
 		
 return 0;
 }
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+1. Объявить тип-структуру humen, включающую имя человека, фамилию и год рождения.
+2. Считать данные из файла
+3. Построить на их основе другой массив, упорядочив элементы по годам рождения.
+4. Вывести результат.
+*/
+
+struct humen {
+    char name[100];
+    char sname[100];
+    int year;
+};
+
+int main() {
+    FILE *file = fopen("people.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    // Считаем количество строк в файле
+    int N = 0;
+    char ch;
+    while (!feof(file)) {
+        ch = fgetc(file);
+        if (ch == '\n') N++;
+    }
+    rewind(file); // Возвращаемся в начало файла
+
+    struct humen h1[N];
+    struct humen h2[N];
+
+    // Чтение данных из файла
+    for (int i = 0; i < N; i++) {
+        fscanf(file, "%s %s %d", h1[i].name, h1[i].sname, &h1[i].year);
+        h2[i] = h1[i]; // Копируем в массив для сортировки
+    }
+    fclose(file);
+
+    // Вывод исходных данных
+    printf("Original data:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%s %s %d\n", h1[i].name, h1[i].sname, h1[i].year);
+    }
+
+    // Сортировка по году рождения (пузырьковая)
+    for (int k = 0; k < N-1; k++) {
+        for (int i = 0; i < N-1; i++) {
+            if (h2[i].year > h2[i+1].year) {
+                // Меняем местами всю структуру
+                struct humen temp = h2[i+1];
+                h2[i+1] = h2[i];
+                h2[i] = temp;
+            }
+        }
+    }
+
+    // Вывод отсортированных данных
+    printf("\nSorted by year:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%s %s %d\n", h2[i].name, h2[i].sname, h2[i].year);
+    }
+
+    return 0;
+}
