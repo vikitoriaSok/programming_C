@@ -1387,3 +1387,87 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+//ЗАДАЧА
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+1. Объявить тип-структуру humen, включающую имя человека, фамилию и год рождения.
+2. Объявить два массива из элементов типа humen (количество определяется из файла).
+3. Ввести данные из файла 
+4. Построить на их основе другой, упорядочив элементы по годам рождения. 
+5. Вывести результат. */
+
+struct humen
+{
+    char name[100];
+    char sname[100];
+    int year;    
+};
+
+int main(int argc, char *argv[]) {
+    
+    FILE *f = fopen("input.txt", "r");
+    if (f == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    // Считаем количество записей в файле
+    int N = 0;
+    char buffer[256];
+    while (fgets(buffer, sizeof(buffer), f) {
+        N++;
+    }
+    rewind(f); // Возвращаем указатель в начало файла
+
+    struct humen h1[N];
+    struct humen h2[N];
+
+    // Чтение данных из файла
+    for (int i = 0; i < N; i++)
+    {
+        fscanf(f, "%s %s %d", h1[i].name, h1[i].sname, &h1[i].year);
+        h2[i] = h1[i];
+    }
+    fclose(f);
+
+    // Вывод исходных данных
+    printf("Original data:\n");
+    for (int i = 0; i < N; i++)
+    {
+        printf("Name: %s. ", h1[i].name);
+        printf("Middle name: %s. ", h1[i].sname);
+        printf("Birth: %d. ", h1[i].year);
+        printf("\n");
+    }
+
+    // Сортировка (как в вашем коде, но исправлена ошибка - меняем всю структуру)
+    struct humen temp;
+    for (int k = 0; k < N-1; k++) {
+        for (int i = 0; i < N-1; i++) {
+            if(h2[i].year > h2[i+1].year) {
+                temp = h2[i+1];
+                h2[i+1] = h2[i];
+                h2[i] = temp;
+            }
+        }
+    }
+
+    // Вывод отсортированных данных
+    printf("\nSorted by year:\n");
+    for (int i = 0; i < N; i++)
+    {
+        printf("Name: %s. ", h2[i].name);
+        printf("Middle name: %s. ", h2[i].sname);
+        printf("Birth: %d. ", h2[i].year);
+        printf("\n");
+    }
+    
+    return 0;
+}
